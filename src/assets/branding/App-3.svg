@@ -1,0 +1,42 @@
+<svg width="1440" height="800" viewBox="0 0 1440 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_520_352)">
+<rect width="1440" height="800" fill="#1569EF"/>
+<g filter="url(#filter0_f_520_352)">
+<ellipse cx="36.5" cy="83" rx="167.5" ry="153" fill="white" fill-opacity="0.4"/>
+</g>
+<g filter="url(#filter1_f_520_352)">
+<ellipse cx="1439.5" cy="46" rx="167.5" ry="153" fill="white" fill-opacity="0.4"/>
+</g>
+<g filter="url(#filter2_f_520_352)">
+<ellipse cx="715.5" cy="346" rx="330.5" ry="65" fill="white" fill-opacity="0.4"/>
+</g>
+<g filter="url(#filter3_f_520_352)">
+<ellipse cx="1389.5" cy="800" rx="117.5" ry="114" fill="white" fill-opacity="0.4"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_520_352" x="-331" y="-270" width="735" height="706" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_520_352"/>
+</filter>
+<filter id="filter1_f_520_352" x="1072" y="-307" width="735" height="706" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_520_352"/>
+</filter>
+<filter id="filter2_f_520_352" x="185" y="81" width="1061" height="530" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_520_352"/>
+</filter>
+<filter id="filter3_f_520_352" x="1072" y="486" width="635" height="628" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_520_352"/>
+</filter>
+<clipPath id="clip0_520_352">
+<rect width="1440" height="800" fill="white"/>
+</clipPath>
+</defs>
+</svg>
