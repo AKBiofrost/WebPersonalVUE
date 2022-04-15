@@ -1,8 +1,10 @@
 <template>
   <v-app>
     <v-main>
-    <body>
-
+      <body>
+        <div id="app">
+          <Particles />
+        </div>
         <Bubble>
           <a id="home" href="#">
             <span>Home</span>
@@ -18,6 +20,7 @@
           </div>
         </Bubble>
         <router-view />
+
         <v-col align="center">
           <cabecera></cabecera>
 
@@ -34,9 +37,6 @@
 
           <tableros></tableros>
         </v-col>
-
-
-
       </body>
     </v-main>
   </v-app>
@@ -48,6 +48,7 @@ import cabecera from "@/components/cabecera.vue";
 import tableros from "@/components/tableros.vue";
 import redes from "@/components/redesSociales.vue";
 import fondo from "@/assets/fondo.png";
+import Particles from "@/components/particles.vue";
 
 export default {
   name: "App",
@@ -56,15 +57,14 @@ export default {
     redes: redes,
     tableros: tableros,
     cabecera: cabecera,
-    Fondo:fondo, 
-
-    //
+    Fondo: fondo,
   }),
   components: {
     Bubble, // Register your component,
     cabecera,
     tableros,
     redes,
+    Particles,
   },
 };
 </script>
@@ -103,21 +103,17 @@ h1 {
   line-height: 59px;
   text-align: center;
 }
-.fondo{
-
-width: 100%; 
-height: 100vh;
-
+.fondo {
+  width: 100%;
+  height: 100vh;
 }
 body {
- 
+  height: 140%;
   background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEwb23ce3OWGfCQnerMdrSKNIhBCJ-rkTWJObX2FqUVMfoke_tWdmpRTYw2zpndY3AXhrTq0oG3EREsA6tXOvoSQptTV3DuHDukFurW1qdATu1Pe8LHDl2nN6KnHSO72JKHUZNi_Fgx41v-lu318HmowBXTvBxOpUfdoPHgkId3aYQBwuZUArlUdTJ/s16000/fondo.png");
-background-size: cover;
-  background-repeat:no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-position: center center;
 }
-
-
 
 h2 {
   font-family: "Roboto";

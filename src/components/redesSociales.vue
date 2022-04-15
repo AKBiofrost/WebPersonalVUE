@@ -1,5 +1,6 @@
 <template>
- 
+
+ <div id='rrss'>
     <ul>
       <li>
         <a class="fondo"> <img height="65" width="74" :src="Gmail" /> </a>
@@ -14,7 +15,7 @@
         <a href="#about"> <img height="65" width="74" :src="Instagram" /> </a>
       </li>
     </ul>
-
+</div>
 </template>
 
 <script>
@@ -54,7 +55,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style  >
 .v-card.on-hover.theme--dark {
   background-color: rgba(#fff, 0.8);
 }
@@ -102,9 +103,18 @@ h2 {
 ul {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 10;
   overflow: hidden;
   
+  
+}
+
+#rrss {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 10;
+    
 }
 
 li {

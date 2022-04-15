@@ -8,37 +8,6 @@
           <v-card
             :elevation="hover ? 16 : 2"
             :class="{ 'on-hover': hover }"
-         
-         
-             id="tarjeta-inactiva"
-          >
-           <v-col Justify="center">
-              <div class="padre">
-                <div class="texto_boton">
-                  <img width="50%" :src="portafolio" />
-                </div>
-              </div>
-
-              <div class="padre-flex">
-                <div class="content">
-               
-                    <div class="padre">
-                      <font class="texto_boton" color="#000">Trabajos realizados en las areas de UI/UX, android y 3D</font>
-                    </div>
-               
-                </div>
-              </div>
-
-              <!-------------------------------------------------->
-            </v-col>
-          </v-card>
-        </div>
-
-        <div v-else>
-          
-          <v-card
-            :elevation="hover ? 16 : 8"
-            :class="{ 'on-hover': hover }"
             id="tarjeta"
           >
             <v-col Justify="center">
@@ -50,11 +19,41 @@
 
               <div class="padre-flex">
                 <div class="content">
-               
-                    <div class="padre">
-                      <font class="texto_boton" color="#fff">Trabajos realizados en las areas de UI/UX, android y 3D</font>
-                    </div>
-               
+                  <div class="padre">
+                    <font class="texto_boton" color="#fff"
+                      >Trabajos realizados en las areas de UI/UX, android y
+                      3D</font
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-------------------------------------------------->
+            </v-col>
+          </v-card>
+        </div>
+
+        <div v-else>
+          <v-card
+            :elevation="hover ? 16 : 8"
+            :class="{ 'on-hover': hover }"
+            id="tarjeta-inactiva"
+          >
+            <v-col Justify="center">
+              <div class="padre">
+                <div class="texto_boton">
+                  <img width="50%" :src="portafolio" />
+                </div>
+              </div>
+
+              <div class="padre-flex">
+                <div class="content">
+                  <div class="padre">
+                    <font class="texto_boton" color="#000"
+                      >Trabajos realizados en las areas de UI/UX, android y
+                      3D</font
+                    >
+                  </div>
                 </div>
               </div>
 
@@ -73,36 +72,25 @@
           <v-card
             :elevation="hover ? 16 : 8"
             :class="{ 'on-hover': hover }"
-            class="rounded-xl"
-            color="#fff"
+            id="tarjeta"
           >
-            <v-img width="30%" :src="Man"> </v-img>
-            <font class="texto_boton" color="#000">Diseñador de Productos</font>
-            <!----->
+            <v-col Justify="center">
+              <div class="padre">
+                <div class="texto_boton">
+                  <img width="50%" :src="Man" />
+                </div>
+              </div>
 
-            <!---------------------------- SKILL----------------------------------------->
-            <v-card color="#fff" class="ma-4" flat>
-              <v-row justify="space-around">
-                <v-card width="29%" flat color="#fff">
-                  <v-img :src="tabla"> </v-img>
-                  <v-img :src="estrellas_movil"> </v-img>
-                </v-card>
-
-                <v-card width="29%" flat color="#fff">
-                  <v-img :src="d3"> </v-img>
-                  <v-img :src="estrellas_movil"> </v-img>
-                </v-card>
-              </v-row>
-            </v-card>
-
-            <v-card color="#fff" class="ma-4" flat>
-              <v-row justify="space-around">
-                <v-card width="29%" flat color="#fff">
-                  <v-img :src="carpeta"> </v-img>
-                  <v-img :src="estrellas_ux"> </v-img>
-                </v-card>
-              </v-row>
-            </v-card>
+              <div class="padre-flex">
+                <div class="content">
+                  <div class="padre">
+                    <font class="texto_boton" color="#fff"
+                      >Diseñador de Productos con 6 años de experiencia</font
+                    >
+                  </div>
+                </div>
+              </div>
+            </v-col>
           </v-card>
         </div>
 
@@ -110,37 +98,27 @@
           <v-card
             :elevation="hover ? 16 : 8"
             :class="{ 'on-hover': hover }"
-            class="rounded-xl"
-            color="#1569EF"
+            id="tarjeta-inactiva"
           >
-            <!---PERSONA-->
-            <v-img width="30%" :src="Man"> </v-img>
-            <!--- FIN PERSONA-->
-            <font class="texto_boton" color="#fff">Diseñador de Productos</font>
+            <v-col Justify="center">
+              <div class="padre">
+                <div class="texto_boton">
+                  <img width="50%" :src="Man" />
+                </div>
+              </div>
 
-            <!--- SKILL-->
-            <v-card color="#1569EF" class="ma-4" flat>
-              <v-row justify="space-around">
-                <v-card width="29%" flat color="#1569EF">
-                  <v-img :src="tabla"> </v-img>
-                  <v-img :src="estrellas_movil"> </v-img>
-                </v-card>
+              <div class="padre-flex">
+                <div class="content">
+                  <div class="padre">
+                    <font class="texto_boton" color="#000"
+                      >Diseñador de Productos con 6 años de experiencia</font
+                    >
+                  </div>
+                </div>
+              </div>
 
-                <v-card width="29%" flat color="#1569EF">
-                  <v-img :src="d3"> </v-img>
-                  <v-img :src="estrellas_movil"> </v-img>
-                </v-card>
-              </v-row>
-            </v-card>
-
-            <v-card color="#1569EF" class="ma-4" flat>
-              <v-row justify="space-around">
-                <v-card width="29%" flat color="#1569EF">
-                  <v-img :src="carpeta"> </v-img>
-                  <v-img :src="estrellas_ux"> </v-img>
-                </v-card>
-              </v-row>
-            </v-card>
+              <!-------------------------------------------------->
+            </v-col>
           </v-card>
         </div>
       </v-hover>
@@ -148,54 +126,32 @@
 
     <v-col>
       <h1>Sobre Mí</h1>
-      <v-hover v-slot="{ hover }" open-delay="200">
+
+
+<v-hover v-slot="{ hover }" close-delay="200">
         <div v-if="hover">
           <v-card
             :elevation="hover ? 16 : 8"
             :class="{ 'on-hover': hover }"
-            color="#fff"
-            class="rounded-xl"
+            id="tarjeta"
           >
-            <v-img width="30%" :src="CV"> </v-img>
-
-            <font color="#000"
-              >Me llamo Carlos Delgado, focalizo los resultados de mercado
-              diseñando centrado en el usuario.
-            </font>
-
-            <font color="#000"> Trabajo por SCRUM y Design Thinking </font>
-
-            <div class="padre">
-              <div class="hijo">
-                <v-card class="d-flex rounded-xl flex-row ma-2" width="100%">
-                  <fond class="texto_boton ml-4 mr-4">Java</fond>
-
-                  <v-card class="mt-10" width="45%" flat>
-                    <div class="padre">
-                      <div class="hijo">
-                        <v-img class="ml-4 mr-8" :src="estrellas_movil">
-                        </v-img>
-                      </div>
-                    </div>
-                  </v-card>
-
-                  <v-card class="ma-1 rounded-xl" width="35%" flat>
-                    <v-img class="ml-4" :src="java"> </v-img>
-                  </v-card>
-                </v-card>
+            <v-col Justify="center">
+              <div class="padre">
+                <div class="texto_boton">
+                  <img width="50%" :src="CV" />
+                </div>
               </div>
-            </div>
 
-            <v-carousel
-              cycle
-              height="400"
-              hide-delimiter-background
-              show-arrows-on-hover
-            >
-              <v-carousel-item v-for="(slide, i) in slides" :key="i">
-                <v-img class="ml-4" :src="java1"> </v-img>
-              </v-carousel-item>
-            </v-carousel>
+              <div class="padre-flex">
+                <div class="content">
+                  <div class="padre">
+                    <font class="texto_boton" color="#fff"
+                      >Me llamo Carlos Delgado, me especializo en diseño de productos digitales</font
+                    >
+                  </div>
+                </div>
+              </div>
+            </v-col>
           </v-card>
         </div>
 
@@ -203,51 +159,31 @@
           <v-card
             :elevation="hover ? 16 : 8"
             :class="{ 'on-hover': hover }"
-            color="#1569EF"
-            class="rounded-xl pa-2"
+            id="tarjeta-inactiva"
           >
-            <v-img width="30%" :src="CV"> </v-img>
-
-            <font color="#fff"
-              >Me llamo Carlos Delgado, focalizo los resultados de mercado
-              diseñando centrado en el usuario. Trabajo por SCRUM y Design
-              Thinking
-            </font>
-
-            <div class="padre">
-              <div class="hijo">
-                <v-card class="d-flex rounded-xl flex-row ma-2" width="100%">
-                  <fond class="texto_boton ml-4 mr-4">Java</fond>
-
-                  <v-card class="mt-10" width="45%" flat>
-                    <div class="padre">
-                      <div class="hijo">
-                        <v-img class="ml-4 mr-8" :src="estrellas_movil">
-                        </v-img>
-                      </div>
-                    </div>
-                  </v-card>
-
-                  <v-card class="ma-1 rounded-xl" width="35%" flat>
-                    <v-img class="ml-4" :src="java"> </v-img>
-                  </v-card>
-                </v-card>
+            <v-col Justify="center">
+              <div class="padre">
+                <div class="texto_boton">
+                  <img width="50%" :src="CV" />
+                </div>
               </div>
-            </div>
 
-            <v-carousel
-              cycle
-              height="400"
-              hide-delimiter-background
-              show-arrows-on-hover
-            >
-              <v-carousel-item v-for="(slide, i) in slides" :key="i">
-                <v-img class="ml-4" :src="java1"> </v-img>
-              </v-carousel-item>
-            </v-carousel>
+              <div class="padre-flex">
+                <div class="content">
+                  <div class="padre">
+                    <font class="texto_boton" color="#000"
+                      >Me llamo Carlos Delgado, me especializo en diseño de productos digitales</font
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-------------------------------------------------->
+            </v-col>
           </v-card>
         </div>
       </v-hover>
+     
     </v-col>
   </v-row>
 </template>
@@ -419,16 +355,13 @@ h2 {
   border-radius: 40px;
 }
 
-
 #tarjeta-inactiva {
   position: absolute;
   width: 30%;
   height: 2.2hv;
 
   background: rgba(255, 255, 255, 0.8);
-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
-border-radius: 40px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+  border-radius: 40px;
 }
-
-
 </style>
