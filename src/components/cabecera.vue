@@ -1,14 +1,10 @@
 <template>
-<v-col>
-  <div >
-    <div id="rrss" align="center">
-      <ul >
-        <li>
-          <a >   <img height="150" width="150" :src="Logo" /> </a>
-        </li>
-      </ul>
-    </div>
-  </div>
+  <v-col>
+  
+      <div id="rrss">
+        <v-img class="logo" height="150" width="150" :src="Logo"> </v-img>
+      </div>
+   
   </v-col>
 </template>
 
@@ -98,36 +94,17 @@ h2 {
   position: relative;
   width: 100%;
   height: 100%;
-  
 }
+#logo{
+position: absolute;
 
-ul {
-  list-style-type: none;
-  margin: 0;
- 
-  overflow: hidden;
- 
 }
-
-li {
-  float: center;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
- 
-  text-decoration: none;
-  width: "5%";
-}
-
-li a:hover {
-  box-shadow: 0 8px 32px 0 rgba(193, 193, 196, 0.37);
+.logo:hover{
+box-shadow: 0 8px 32px 0 rgba(193, 193, 196, 0.37);
   backdrop-filter: blur(5.5px);
   -webkit-backdrop-filter: blur(5.5px);
   border-radius: 100px;
-;
+
 }
 
 
