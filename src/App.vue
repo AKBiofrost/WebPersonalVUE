@@ -26,21 +26,7 @@
           <div id="app">
             <Particles />
           </div>
-          <Bubble>
-            <a id="home" href="#">
-              <span>Home</span>
-            </a>
-
-            <a id="test" href="test">
-              <span>Test</span>
-            </a>
-
-            <div id="nav">
-              <router-link to="/">Home</router-link> |
-              <router-link to="/about">About</router-link>
-            </div>
-          </Bubble>
-          <router-view />
+        
 
           <v-col align="center">
             <cabecera class="d-flex justify-center"></cabecera>
@@ -63,7 +49,7 @@
 </template>
 
 <script>
-import { Bubble } from "vue-burger-menu";
+//import { Bubble } from "vue-burger-menu";
 import cabecera from "@/components/cabecera.vue";
 import tableros from "@/components/tableros.vue";
 import redes from "@/components/redesSociales.vue";
@@ -98,34 +84,17 @@ export default {
       console.log("contador de tiempo" + this.BoolWelcome);
     }, 8000),
       this.$nextTick(function () {
-        // Código que se ejecutará solo después de
-        // haber renderizado la vista completa
-        //this.CapturaContrato();
-        //this.tamañoPantalla();
-        // this.cargardata();
-        //this.cargarAlerta();
-        // this.GraficoPorPais();
-        //this.TimeWelcom()
+    
       });
   },
 
   components: {
-    Bubble, // Register your component,
+   // Bubble, // Register your component,
     cabecera,
     tableros,
     redes,
     Particles,
-    // AtomSpinner,
-    // HollowDotsSpinner,
-    //  PixelSpinner,
-    // IntersectingCirclesSpinner,
-    //// ScalingSquaresSpinner,
-    // HalfCircleSpinner,
-    // TrinityRingsSpinner,
-    // FulfillingSquareSpinner,
-    // CirclesToRhombusesSpinner,
-    // SemipolarSpinner,
-    //// FulfillingBouncingCircleSpinner,
+   
     BreedingRhombusSpinner,
   },
 };
@@ -170,23 +139,22 @@ h1 {
   height: 100vh;
 }
 body {
-  height: 140%;
+  height: 120%;
   background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEwb23ce3OWGfCQnerMdrSKNIhBCJ-rkTWJObX2FqUVMfoke_tWdmpRTYw2zpndY3AXhrTq0oG3EREsA6tXOvoSQptTV3DuHDukFurW1qdATu1Pe8LHDl2nN6KnHSO72JKHUZNi_Fgx41v-lu318HmowBXTvBxOpUfdoPHgkId3aYQBwuZUArlUdTJ/s16000/fondo.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
 #fondo {
-  height: 140%;
+  height: 120%;
   background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEwb23ce3OWGfCQnerMdrSKNIhBCJ-rkTWJObX2FqUVMfoke_tWdmpRTYw2zpndY3AXhrTq0oG3EREsA6tXOvoSQptTV3DuHDukFurW1qdATu1Pe8LHDl2nN6KnHSO72JKHUZNi_Fgx41v-lu318HmowBXTvBxOpUfdoPHgkId3aYQBwuZUArlUdTJ/s16000/fondo.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  position: absolute;
 }
 
-#cargaInicial {
-  padding: 10;
-}
+
 
 h2 {
   font-family: "Roboto";

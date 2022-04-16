@@ -13,7 +13,7 @@
             <v-col Justify="center">
               <div class="padre">
                 <div class="texto_boton">
-                  <img width="50%" :src="portafolio" />
+                  <img width="30%" :src="portafolio" />
                 </div>
               </div>
 
@@ -21,8 +21,7 @@
                 <div class="content">
                   <div class="padre">
                     <font class="texto_boton" color="#fff"
-                      >Trabajos realizados en las areas de UI/UX, android y
-                      3D</font
+                      >Trabajos realizados en UI/UX y Android </font
                     >
                   </div>
                 </div>
@@ -42,7 +41,7 @@
             <v-col Justify="center">
               <div class="padre">
                 <div class="texto_boton">
-                  <img width="50%" :src="portafolio" />
+                  <img width="30%" :src="portafolio" />
                 </div>
               </div>
 
@@ -50,8 +49,7 @@
                 <div class="content">
                   <div class="padre">
                     <font class="texto_boton" color="#000"
-                      >Trabajos realizados en las areas de UI/UX, android y
-                      3D</font
+                      >Trabajos realizados en UI/UX y Android </font
                     >
                   </div>
                 </div>
@@ -77,7 +75,7 @@
             <v-col Justify="center">
               <div class="padre">
                 <div class="texto_boton">
-                  <img width="50%" :src="Man" />
+                  <img width="30%" :src="Man" />
                 </div>
               </div>
 
@@ -85,7 +83,7 @@
                 <div class="content">
                   <div class="padre">
                     <font class="texto_boton" color="#fff"
-                      >Diseñador de Productos con 6 años de experiencia</font
+                      >Metodologia por Design Thinking</font
                     >
                   </div>
                 </div>
@@ -103,7 +101,7 @@
             <v-col Justify="center">
               <div class="padre">
                 <div class="texto_boton">
-                  <img width="50%" :src="Man" />
+                  <img width="30%" :src="Man" />
                 </div>
               </div>
 
@@ -111,7 +109,7 @@
                 <div class="content">
                   <div class="padre">
                     <font class="texto_boton" color="#000"
-                      >Diseñador de Productos con 6 años de experiencia</font
+                      >Metodologia por Design Thinking</font
                     >
                   </div>
                 </div>
@@ -138,7 +136,7 @@
             <v-col Justify="center">
               <div class="padre">
                 <div class="texto_boton">
-                  <img width="50%" :src="CV" />
+                  <img width="30%" :src="CV" />
                 </div>
               </div>
 
@@ -146,7 +144,7 @@
                 <div class="content">
                   <div class="padre">
                     <font class="texto_boton" color="#fff"
-                      >Me llamo Carlos Delgado, me especializo en diseño de productos digitales</font
+                      > Experiencia/Certificaciones</font
                     >
                   </div>
                 </div>
@@ -164,7 +162,7 @@
             <v-col Justify="center">
               <div class="padre">
                 <div class="texto_boton">
-                  <img width="50%" :src="CV" />
+                  <img width="30%" :src="CV" />
                 </div>
               </div>
 
@@ -172,7 +170,7 @@
                 <div class="content">
                   <div class="padre">
                     <font class="texto_boton" color="#000"
-                      >Me llamo Carlos Delgado, me especializo en diseño de productos digitales</font
+                      >Experiencia/Certificaciones</font
                     >
                   </div>
                 </div>
@@ -352,7 +350,7 @@ h2 {
 
   background: rgba(15, 18, 22, 0.8);
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
-  border-radius: 40px;
+  border-radius: 60px;
 }
 
 
@@ -364,6 +362,8 @@ h2 {
 
   background: rgba(255, 255, 255, 0.8);
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
-  border-radius: 40px;
+  border-radius: 60px;
 }
+
+
 </style>
