@@ -1,5 +1,5 @@
 <template>
-  <v-row justify="space-around " class="card pa-2">
+  <v-row justify="space-around " class=" card pa-2">
     <v-col Justify="center">
       <h1>Portafolio</h1>
 
@@ -354,6 +354,8 @@ h2 {
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
   border-radius: 40px;
 }
+
+
 
 #tarjeta-inactiva {
   position: absolute;

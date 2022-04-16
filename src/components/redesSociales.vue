@@ -1,6 +1,5 @@
 <template>
-
- <div id='rrss'>
+  <div id="rrss">
     <ul>
       <li>
         <a class="fondo"> <img height="65" width="74" :src="Gmail" /> </a>
@@ -15,7 +14,7 @@
         <a href="#about"> <img height="65" width="74" :src="Instagram" /> </a>
       </li>
     </ul>
-</div>
+  </div>
 </template>
 
 <script>
@@ -55,7 +54,7 @@ export default {
 };
 </script>
 
-<style  >
+<style>
 .v-card.on-hover.theme--dark {
   background-color: rgba(#fff, 0.8);
 }
@@ -105,16 +104,13 @@ ul {
   margin: 0;
   padding: 10;
   overflow: hidden;
-  
-  
 }
 
 #rrss {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding: 10;
-    
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 10;
 }
 
 li {
@@ -131,11 +127,10 @@ li a {
 }
 
 li a:hover {
-
-box-shadow: 0 8px 32px 0 rgba(193, 193, 196, 0.37);
-backdrop-filter: blur( 5.5px );
--webkit-backdrop-filter: blur( 5.5px );
-border-radius: 10px;
-  border-radius: 15px;
+  box-shadow: 0 8px 32px 0 rgba(193, 193, 196, 0.37);
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  border-radius: 50px;
+  
 }
 </style>
