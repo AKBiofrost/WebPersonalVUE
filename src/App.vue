@@ -2,83 +2,23 @@
   <v-app>
     <v-main>
       <div class="fondo" v-if="BoolWelcome == false">
-        <v-img height="120%" :src="Fondo">
-          <div id="app">
-            <Particles />
+        <v-img class="padre" height="100%" :src="Fondo">
+          <Particles />
+          <div class="hijo" aling="center">
+            
+            
+              <v-row justify="center">
+                <breeding-rhombus-spinner
+                  :animation-duration="2000"
+                  :size="120"
+                  :color="'#fff'"
+                />
+                
+
+              </v-row>
+               <h1>Bienvenido</h1>
+            
           </div>
-
-          <h1>holaaa</h1>
-          <v-col align="center">
-            <v-row align="center" justify="center">
-              <atom-spinner
-                :animation-duration="1000"
-                :size="60"
-                :color="'#ff1d5e'"
-              />
-              <hollow-dots-spinner
-                :animation-duration="1000"
-                :size="60"
-                :color="'#ff1d5e'"
-              />
-              <pixel-spinner
-                :animation-duration="2000"
-                :pixel-size="70"
-                :color="'#ff1d5e'"
-              />
-
-              <scaling-squares-spinner
-                :animation-duration="1250"
-                :size="65"
-                :color="'#ff1d5e'"
-              />
-              <intersecting-circles-spinner
-                :animation-duration="1200"
-                :size="70"
-                :color="'#ff1d5e'"
-              />
-
-              <half-circle-spinner
-                :animation-duration="1000"
-                :size="60"
-                :color="'#ff1d5e'"
-              />
-              <trinity-rings-spinner
-                :animation-duration="1500"
-                :size="66"
-                :color="'#ff1d5e'"
-              />
-            </v-row>
-            <fulfilling-square-spinner
-              :animation-duration="4000"
-              :size="50"
-              :color="'#ff1d5e'"
-            />
-
-            <circles-to-rhombuses-spinner
-              :animation-duration="1200"
-              :circles-num="3"
-              :circle-size="15"
-              :color="'#ff1d5e'"
-            />
-
-            <semipolar-spinner
-              :animation-duration="2000"
-              :size="65"
-              :color="'#ff1d5e'"
-            />
-
-            <fulfilling-bouncing-circle-spinner
-              :animation-duration="4000"
-              :size="60"
-              :color="'#ff1d5e'"
-            />
-
-            <breeding-rhombus-spinner
-              :animation-duration="2000"
-              :size="65"
-              :color="'#ff1d5e'"
-            />
-          </v-col>
         </v-img>
       </div>
       <div class="fondo" v-else>
@@ -104,15 +44,13 @@
 
           <v-col align="center">
             <cabecera class="d-flex justify-center"></cabecera>
-  <div class="titulo">
-                <h1>Alexander K.Biofröst</h1>
-              </div>
-                <div class="Subtitulo">
-                <h2>Diseñador de Productos</h2>
-              </div>
+            <div class="titulo">
+              <h1>Alexander K.Biofröst</h1>
+            </div>
+            <div class="Subtitulo">
+              <h2>Diseñador de Productos</h2>
+            </div>
             <v-col justify="center">
-          
-            
               <redes class="d-flex justify-center"></redes>
             </v-col>
 
@@ -131,17 +69,17 @@ import tableros from "@/components/tableros.vue";
 import redes from "@/components/redesSociales.vue";
 import fondo from "@/assets/fondo.png";
 import Particles from "@/components/particles.vue";
-import { AtomSpinner } from "epic-spinners";
-import { HollowDotsSpinner } from "epic-spinners";
-import { PixelSpinner } from "epic-spinners";
-import { IntersectingCirclesSpinner } from "epic-spinners";
-import { ScalingSquaresSpinner } from "epic-spinners";
-import { HalfCircleSpinner } from "epic-spinners";
-import { TrinityRingsSpinner } from "epic-spinners";
-import { FulfillingSquareSpinner } from "epic-spinners";
-import { CirclesToRhombusesSpinner } from "epic-spinners";
-import { SemipolarSpinner } from "epic-spinners";
-import { FulfillingBouncingCircleSpinner } from "epic-spinners";
+//import { AtomSpinner } from "epic-spinners";
+//import { HollowDotsSpinner } from "epic-spinners";
+//import { PixelSpinner } from "epic-spinners";
+//import { IntersectingCirclesSpinner } from "epic-spinners";
+//import { ScalingSquaresSpinner } from "epic-spinners";
+//import { HalfCircleSpinner } from "epic-spinners";
+//import { TrinityRingsSpinner } from "epic-spinners";
+//import { FulfillingSquareSpinner } from "epic-spinners";
+//import { CirclesToRhombusesSpinner } from "epic-spinners";
+//import { SemipolarSpinner } from "epic-spinners";
+//import { FulfillingBouncingCircleSpinner } from "epic-spinners";
 import { BreedingRhombusSpinner } from "epic-spinners";
 
 export default {
@@ -177,17 +115,17 @@ export default {
     tableros,
     redes,
     Particles,
-    AtomSpinner,
-    HollowDotsSpinner,
-    PixelSpinner,
-    IntersectingCirclesSpinner,
-    ScalingSquaresSpinner,
-    HalfCircleSpinner,
-    TrinityRingsSpinner,
-    FulfillingSquareSpinner,
-    CirclesToRhombusesSpinner,
-    SemipolarSpinner,
-    FulfillingBouncingCircleSpinner,
+    // AtomSpinner,
+    // HollowDotsSpinner,
+    //  PixelSpinner,
+    // IntersectingCirclesSpinner,
+    //// ScalingSquaresSpinner,
+    // HalfCircleSpinner,
+    // TrinityRingsSpinner,
+    // FulfillingSquareSpinner,
+    // CirclesToRhombusesSpinner,
+    // SemipolarSpinner,
+    //// FulfillingBouncingCircleSpinner,
     BreedingRhombusSpinner,
   },
 };
@@ -203,7 +141,7 @@ export default {
 }
 .hijo {
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 50%;
   height: 30%;
   width: 50%;
@@ -244,6 +182,10 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+#cargaInicial {
+  padding: 10;
 }
 
 h2 {
