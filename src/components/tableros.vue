@@ -1,46 +1,16 @@
 <template>
-  <v-row justify="space-around " class=" card pa-2">
+  <v-row justify="space-around " class="card pa-2">
     <v-col Justify="center">
       <h1>Portafolio</h1>
 
-      <v-hover v-slot="{ hover }" open-delay="200">
-        <div v-if="hover">
+     <div >
           <v-card
-            :elevation="hover ? 16 : 2"
-            :class="{ 'on-hover': hover }"
-            id="tarjeta"
-          >
-            <v-col Justify="center">
-              <div class="padre">
-                <div class="texto_boton">
-                  <img width="30%" :src="portafolio" />
-                </div>
-              </div>
-
-              <div class="padre-flex">
-                <div class="content">
-                  <div class="padre">
-                    <font class="texto_boton" color="#fff"
-                      >Trabajos realizados en UI/UX y Android </font
-                    >
-                  </div>
-                </div>
-              </div>
-
-              <!-------------------------------------------------->
-            </v-col>
-          </v-card>
-        </div>
-
-        <div v-else>
-          <v-card
-            :elevation="hover ? 16 : 8"
-            :class="{ 'on-hover': hover }"
+     
             id="tarjeta-inactiva"
           >
             <v-col Justify="center">
               <div class="padre">
-                <div class="texto_boton">
+                <div >
                   <img width="30%" :src="portafolio" />
                 </div>
               </div>
@@ -48,9 +18,9 @@
               <div class="padre-flex">
                 <div class="content">
                   <div class="padre">
-                    <font class="texto_boton" color="#000"
-                      >Trabajos realizados en UI/UX y Android </font
-                    >
+                    <font class="texto_boton" 
+                      >Trabajos realizados en UI/UX y Android
+                    </font>
                   </div>
                 </div>
               </div>
@@ -59,18 +29,17 @@
             </v-col>
           </v-card>
         </div>
-      </v-hover>
+
+       
     </v-col>
 
     <v-col>
       <h1>Perfíl</h1>
 
-      <v-hover v-slot="{ hover }" close-delay="200">
-        <div v-if="hover">
+     <div >
           <v-card
-            :elevation="hover ? 16 : 8"
-            :class="{ 'on-hover': hover }"
-            id="tarjeta"
+          
+            id="tarjeta-inactiva"
           >
             <v-col Justify="center">
               <div class="padre">
@@ -92,71 +61,15 @@
           </v-card>
         </div>
 
-        <div v-else>
-          <v-card
-            :elevation="hover ? 16 : 8"
-            :class="{ 'on-hover': hover }"
-            id="tarjeta-inactiva"
-          >
-            <v-col Justify="center">
-              <div class="padre">
-                <div class="texto_boton">
-                  <img width="30%" :src="Man" />
-                </div>
-              </div>
-
-              <div class="padre-flex">
-                <div class="content">
-                  <div class="padre">
-                    <font class="texto_boton" color="#000"
-                      >Metodologia por Design Thinking</font
-                    >
-                  </div>
-                </div>
-              </div>
-
-              <!-------------------------------------------------->
-            </v-col>
-          </v-card>
-        </div>
-      </v-hover>
+        
     </v-col>
 
     <v-col>
       <h1>Sobre Mí</h1>
 
-
-<v-hover v-slot="{ hover }" close-delay="200">
-        <div v-if="hover">
+     <div >
           <v-card
-            :elevation="hover ? 16 : 8"
-            :class="{ 'on-hover': hover }"
-            id="tarjeta"
-          >
-            <v-col Justify="center">
-              <div class="padre">
-                <div class="texto_boton">
-                  <img width="30%" :src="CV" />
-                </div>
-              </div>
-
-              <div class="padre-flex">
-                <div class="content">
-                  <div class="padre">
-                    <font class="texto_boton" color="#fff"
-                      > Experiencia/Certificaciones</font
-                    >
-                  </div>
-                </div>
-              </div>
-            </v-col>
-          </v-card>
-        </div>
-
-        <div v-else>
-          <v-card
-            :elevation="hover ? 16 : 8"
-            :class="{ 'on-hover': hover }"
+          
             id="tarjeta-inactiva"
           >
             <v-col Justify="center">
@@ -169,19 +82,17 @@
               <div class="padre-flex">
                 <div class="content">
                   <div class="padre">
-                    <font class="texto_boton" color="#000"
-                      >Experiencia/Certificaciones</font
+                    <font class="texto_boton" color="#fff">
+                      Experiencia/Certificaciones</font
                     >
                   </div>
                 </div>
               </div>
-
-              <!-------------------------------------------------->
             </v-col>
           </v-card>
         </div>
-      </v-hover>
-     
+
+       
     </v-col>
   </v-row>
 </template>
@@ -354,16 +265,33 @@ h2 {
 }
 
 
+#tarjeta-inactiva:hover{
+  background: rgba(15, 18, 22, 0.8);
+box-shadow: 0 8px 32px 0 rgba(193, 193, 196, 0.37);
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  border-radius: 60px;
+  color: #ffffff;
+ .texto_boton{
+ color: #ffffff;
+
+ }
+
+}
 
 #tarjeta-inactiva {
   position: absolute;
   width: 30%;
   height: 2.2hv;
-
-  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  background: rgba(255, 255, 255, 0.3);
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
   border-radius: 60px;
+
+  .texto_boton{
+ color: #000;
+
+ }
 }
-
-
 </style>

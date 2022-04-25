@@ -5,44 +5,49 @@
         <v-img class="padre" height="100%" :src="Fondo">
           <Particles />
           <div class="hijo" aling="center">
-            
-            
-              <v-row justify="center">
-                <breeding-rhombus-spinner
-                  :animation-duration="2000"
-                  :size="120"
-                  :color="'#fff'"
-                />
-                
-
-              </v-row>
-               <h1>Bienvenido</h1>
-            
+            <v-row justify="center">
+              <breeding-rhombus-spinner
+                :animation-duration="2000"
+                :size="120"
+                :color="'#fff'"
+              />
+            </v-row>
+            <h1>Bienvenido</h1>
           </div>
         </v-img>
       </div>
-      <div class="fondo" v-else>
-        <body>
-          <div id="app">
-            <Particles />
-          </div>
-        
 
-          <v-col align="center">
-            <cabecera class="d-flex justify-center"></cabecera>
-            <div class="titulo">
-              <h1>Alexander K.Biofröst</h1>
-            </div>
-            <div class="Subtitulo">
-              <h2>Diseñador de Productos</h2>
-            </div>
-            <v-col justify="center">
-              <redes class="d-flex justify-center"></redes>
-            </v-col>
+      <div v-if="BoolWelcome">
+        <div class="fondo">
+          <v-img class="padre" height="100%" :src="Fondo">
+            <body>
+              <div id="app">
+                <Particles />
+              </div>
 
-            <tableros></tableros>
-          </v-col>
-        </body>
+              <v-col align="center">
+                <cabecera class="d-flex justify-center"></cabecera>
+                
+               
+                  <div class="titulo">
+                    <h1 v-if="BoolWelcome">Alexander K.Biofröst</h1>
+                  </div>
+
+                 
+
+                  <div class="Subtitulo">
+                    <h2>Diseñador de Productos</h2>
+                  </div>
+                  <v-col justify="center">
+                    <redes class="d-flex justify-center"></redes>
+                  </v-col>
+
+                  <tableros></tableros>
+            
+              </v-col>
+            </body>
+          </v-img>
+        </div>
       </div>
     </v-main>
   </v-app>
@@ -77,30 +82,49 @@ export default {
     cabecera: cabecera,
     Fondo: fondo,
     BoolWelcome: false,
+    show: true,
   }),
   mounted: function () {
     setTimeout(() => {
       this.BoolWelcome = true;
       console.log("contador de tiempo" + this.BoolWelcome);
     }, 8000),
-      this.$nextTick(function () {
-    
-      });
+      this.$nextTick(function () {});
   },
 
   components: {
-   // Bubble, // Register your component,
+    // Bubble, // Register your component,
     cabecera,
     tableros,
     redes,
     Particles,
-   
+
     BreedingRhombusSpinner,
   },
 };
 </script>
 
 <style lang="scss" scoped>
+.slide-fade-enter-active {
+  transition: all 0.3s ease;
+}
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
 .v-card.on-hover.theme--dark {
   background-color: rgba(#fff, 0.8);
 }
@@ -138,12 +162,13 @@ h1 {
   width: 100%;
   height: 100vh;
 }
-body {
+#body {
   height: 120%;
   background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEwb23ce3OWGfCQnerMdrSKNIhBCJ-rkTWJObX2FqUVMfoke_tWdmpRTYw2zpndY3AXhrTq0oG3EREsA6tXOvoSQptTV3DuHDukFurW1qdATu1Pe8LHDl2nN6KnHSO72JKHUZNi_Fgx41v-lu318HmowBXTvBxOpUfdoPHgkId3aYQBwuZUArlUdTJ/s16000/fondo.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  position: absolute;
 }
 #fondo {
   height: 120%;
@@ -153,8 +178,6 @@ body {
   background-position: center center;
   position: absolute;
 }
-
-
 
 h2 {
   font-family: "Roboto";
