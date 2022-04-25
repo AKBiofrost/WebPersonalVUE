@@ -3,102 +3,88 @@
     <v-col Justify="center">
       <h1>Portafolio</h1>
 
-     <div >
-          <v-card
-     
-            id="tarjeta-inactiva"
-          >
-            <v-col Justify="center">
-              <div class="padre">
-                <div >
-                  <img width="30%" :src="portafolio" />
+      <div>
+        <v-card @click="Portafolio_fn" id="tarjeta-inactiva">
+          <v-col Justify="center">
+            <div class="padre">
+              <div>
+                <img width="30%" :src="portafolio" />
+              </div>
+            </div>
+
+            <div class="padre-flex">
+              <div class="content">
+                <div class="padre">
+                  <font class="texto_boton"
+                    >Trabajos realizados en UI/UX y Android
+                  </font>
                 </div>
               </div>
+            </div>
 
-              <div class="padre-flex">
-                <div class="content">
-                  <div class="padre">
-                    <font class="texto_boton" 
-                      >Trabajos realizados en UI/UX y Android
-                    </font>
-                  </div>
-                </div>
-              </div>
-
-              <!-------------------------------------------------->
-            </v-col>
-          </v-card>
-        </div>
-
-       
+            <!-------------------------------------------------->
+          </v-col>
+        </v-card>
+      </div>
     </v-col>
 
     <v-col>
       <h1>Perfíl</h1>
 
-     <div >
-          <v-card
-          
-            id="tarjeta-inactiva"
-          >
-            <v-col Justify="center">
-              <div class="padre">
-                <div class="texto_boton">
-                  <img width="30%" :src="Man" />
+      <div>
+        <v-card id="tarjeta-inactiva">
+          <v-col Justify="center">
+            <div class="padre">
+              <div class="texto_boton">
+                <img width="30%" :src="Man" />
+              </div>
+            </div>
+
+            <div class="padre-flex">
+              <div class="content">
+                <div class="padre">
+                  <font class="texto_boton" color="#fff"
+                    >Metodologia por Design Thinking</font
+                  >
                 </div>
               </div>
-
-              <div class="padre-flex">
-                <div class="content">
-                  <div class="padre">
-                    <font class="texto_boton" color="#fff"
-                      >Metodologia por Design Thinking</font
-                    >
-                  </div>
-                </div>
-              </div>
-            </v-col>
-          </v-card>
-        </div>
-
-        
+            </div>
+          </v-col>
+        </v-card>
+      </div>
     </v-col>
 
     <v-col>
       <h1>Sobre Mí</h1>
 
-     <div >
-          <v-card
-          
-            id="tarjeta-inactiva"
-          >
-            <v-col Justify="center">
-              <div class="padre">
-                <div class="texto_boton">
-                  <img width="30%" :src="CV" />
+      <div>
+        <v-card id="tarjeta-inactiva">
+          <v-col Justify="center">
+            <div class="padre">
+              <div class="texto_boton">
+                <img width="30%" :src="CV" />
+              </div>
+            </div>
+
+            <div class="padre-flex">
+              <div class="content">
+                <div class="padre">
+                  <font class="texto_boton" color="#fff">
+                    Experiencia/Certificaciones</font
+                  >
                 </div>
               </div>
-
-              <div class="padre-flex">
-                <div class="content">
-                  <div class="padre">
-                    <font class="texto_boton" color="#fff">
-                      Experiencia/Certificaciones</font
-                    >
-                  </div>
-                </div>
-              </div>
-            </v-col>
-          </v-card>
-        </div>
-
-       
+            </div>
+          </v-col>
+        </v-card>
+      </div>
     </v-col>
   </v-row>
 </template>
 
 <script>
 //import { Bubble } from 'vue-burger-menu'
+//import Vue from "vue";
 import foto from "@/assets/foto.png";
 import tabla from "@/assets/recursosVisuales/tabla.png";
 //import skill from '@/components/skill.vue'
@@ -126,9 +112,7 @@ export default {
   name: "App",
 
   data: () => ({
-    //java1:java1,
-    //java2:java2,
-    java: java,
+   java: java,
     estrellas_ux: estrellas_ux,
     carpeta: carpeta,
     tabla: tabla,
@@ -146,6 +130,7 @@ export default {
     cell: cell,
     portafolio: portafolio,
     d3: d3,
+    portafol: false,
     estrellas_movil: estrellas_movil,
     slides: [
       //java1,
@@ -153,9 +138,16 @@ export default {
     ],
     //
   }),
-  components: {
-    // Bubble // Register your component
+  methods: {
+
+    Portafolio_fn() {
+     this.Vue.prototype.$portafol = true;
+     //console.log("ACCESO A FOTO Y NOMBRE DEL USUARIO");
+      console.log(this.$portafol);
+    }
   },
+
+
 };
 </script>
 
@@ -264,19 +256,16 @@ h2 {
   border-radius: 60px;
 }
 
-
-#tarjeta-inactiva:hover{
+#tarjeta-inactiva:hover {
   background: rgba(15, 18, 22, 0.8);
-box-shadow: 0 8px 32px 0 rgba(193, 193, 196, 0.37);
+  box-shadow: 0 8px 32px 0 rgba(193, 193, 196, 0.37);
   backdrop-filter: blur(5.5px);
   -webkit-backdrop-filter: blur(5.5px);
   border-radius: 60px;
   color: #ffffff;
- .texto_boton{
- color: #ffffff;
-
- }
-
+  .texto_boton {
+    color: #ffffff;
+  }
 }
 
 #tarjeta-inactiva {
@@ -289,9 +278,8 @@ box-shadow: 0 8px 32px 0 rgba(193, 193, 196, 0.37);
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
   border-radius: 60px;
 
-  .texto_boton{
- color: #000;
-
- }
+  .texto_boton {
+    color: #000;
+  }
 }
 </style>

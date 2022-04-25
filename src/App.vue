@@ -17,22 +17,25 @@
         </v-img>
       </div>
 
-      <div v-if="BoolWelcome">
+      <div v-if="BoolWelcome==true">
         <div class="fondo">
-          <v-img class="padre" height="100%" :src="Fondo">
+          <v-img class="padre" height="120%" :src="Fondo">
             <body>
               <div id="app">
                 <Particles />
               </div>
 
-              <v-col align="center">
+              <v-col align="center" v-if="!portafol && !perfil && !sobremi"   >
                 <cabecera class="d-flex justify-center"></cabecera>
                 
                
                   <div class="titulo">
-                    <h1 v-if="BoolWelcome">Alexander K.Biofröst</h1>
+                    <h1>Alexander K.Biofröst</h1>
                   </div>
 
+                  <div class="Subtitulo">
+                    <h2>el valor es:{{this.$portafol}}</h2>
+                  </div>
                  
 
                   <div class="Subtitulo">
@@ -45,6 +48,20 @@
                   <tableros></tableros>
             
               </v-col>
+              <div v-if="this.$portafol && !perfil && !sobremi">
+               <div class="Subtitulo">
+                    <h2>holaaaa</h2>
+                  </div>
+              </div>
+              <div v-if="!portafol && perfil && !sobremi">
+
+              </div>
+              <div v-if="!portafol && !perfil && sobremi">
+
+              </div>
+
+
+
             </body>
           </v-img>
         </div>
@@ -55,9 +72,11 @@
 
 <script>
 //import { Bubble } from "vue-burger-menu";
+import Vue from "vue";
 import cabecera from "@/components/cabecera.vue";
 import tableros from "@/components/tableros.vue";
 import redes from "@/components/redesSociales.vue";
+//import portafolio from "@/components/tableros.vue";
 import fondo from "@/assets/fondo.png";
 import Particles from "@/components/particles.vue";
 //import { AtomSpinner } from "epic-spinners";
@@ -72,7 +91,7 @@ import Particles from "@/components/particles.vue";
 //import { SemipolarSpinner } from "epic-spinners";
 //import { FulfillingBouncingCircleSpinner } from "epic-spinners";
 import { BreedingRhombusSpinner } from "epic-spinners";
-
+Vue.prototype.$portafol=false;
 export default {
   name: "App",
 
@@ -82,7 +101,9 @@ export default {
     cabecera: cabecera,
     Fondo: fondo,
     BoolWelcome: false,
-    show: true,
+    
+    perfil: false,
+    sobremi: false,
   }),
   mounted: function () {
     setTimeout(() => {
@@ -98,6 +119,7 @@ export default {
     tableros,
     redes,
     Particles,
+    //portafolio,
 
     BreedingRhombusSpinner,
   },
