@@ -1,88 +1,221 @@
 <template>
-  <v-parallax
-    height="300"
-    dark
-    src="https://www.xtrafondos.com/wallpapers/estructura-abstracta-3d-gris-oscuro-3593.jpg"
-  >
-    <v-col>
-      <h1 color="#fff">Portafolio</h1>
+  <v-flex fluid="true" width="100%">
+    <v-parallax
+      height="500"
+      dark
+      src="https://www.xtrafondos.com/wallpapers/estructura-abstracta-3d-gris-oscuro-3593.jpg"
+    >
+      <v-col>
+        <h1 color="#fff">Portafolio</h1>
 
-      <v-row>
-        <v-col>
-          <div>
-            <v-card @click="Portafolio_fn" id="tarjeta-inactiva">
-              <v-col>
-                <h3 class="texto_boton">Diseño UI/UX</h3>
+        <v-row>
+          <v-col>
+            <div>
+              <v-card @click="dialog = true" id="tarjeta-inactiva">
+                <v-col>
+                  <h3 class="texto_boton">Diseño UI/UX</h3>
 
-                <v-row>
-                  <img width="15%" :src="figma" class="ma-8" />
+                  <v-row>
+                    <img width="15%" :src="figma" class="ma-8" />
 
-                  <div class="padre-flex">
-                    <div class="content">
-                      <div class="padre">
-                        <font class="texto_boton" color="#fff"
-                          >Prototipos Figmas
-                        </font>
+                    <div class="padre-flex">
+                      <div class="content">
+                        <div class="padre">
+                          <font class="texto_boton" color="#fff"
+                            >Prototipos Figmas
+                          </font>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </v-row>
-              </v-col>
-            </v-card>
-          </div>
-        </v-col>
+                  </v-row>
+                </v-col>
+              </v-card>
+            </div>
+          </v-col>
+<!--///////////////////////-->
+          <v-col>
+            <div>
+              <v-card @click="dialog2 = true" id="tarjeta-inactiva">
+                <v-col>
+                  <h3 class="texto_boton">Android</h3>
 
-        <v-col>
-          <div>
-            <v-card @click="Portafolio_fn" id="tarjeta-inactiva">
-              <v-col>
-                <h3 class="texto_boton">Android</h3>
+                  <v-row>
+                    <img width="20%" :src="android" class="ma-8" />
 
-                <v-row>
-                  <img width="20%" :src="android" class="ma-8" />
-
-                  <div class="padre-flex">
-                    <div class="content">
-                      <div class="padre">
-                        <font class="texto_boton" color="#fff"
-                          >App PlayStores
-                        </font>
+                    <div class="padre-flex">
+                      <div class="content">
+                        <div class="padre">
+                          <font class="texto_boton" color="#fff"
+                            >App PlayStores
+                          </font>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </v-row>
-              </v-col>
-            </v-card>
-          </div>
-        </v-col>
+                  </v-row>
+                </v-col>
+              </v-card>
+            </div>
+          </v-col>
+<!--///////////////////////-->
+          <v-col>
+            <div>
+              <v-card @click="dialog3 = true" id="tarjeta-inactiva">
+                <v-col>
+                  <h3 class="texto_boton">Frontend Vue</h3>
 
-        <v-col>
-          <div>
-            <v-card @click="Portafolio_fn" id="tarjeta-inactiva">
-              <v-col>
-                <h3 class="texto_boton">Frontend Vue</h3>
+                  <v-row>
+                    <img width="25%" :src="vue" class="ma-9" />
 
-                <v-row>
-                  <img width="25%" :src="vue" class="ma-9" />
-
-                  <div class="padre-flex">
-                    <div class="content">
-                      <div class="padre">
-                        <font class="texto_boton" color="#fff">App Vuejs </font>
+                    <div class="padre-flex">
+                      <div class="content">
+                        <div class="padre">
+                          <font class="texto_boton" color="#fff"
+                            >App Vuejs
+                          </font>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </v-row>
-              </v-col>
-            </v-card>
-          </div>
-        </v-col>
+                  </v-row>
+                </v-col>
+              </v-card>
+            </div>
+          </v-col>
+<!--///////////////////////-->
+        </v-row>
+      </v-col>
+    </v-parallax>
+    <!--///////////////////////-->
+
+    <template>
+      <v-row justify="center">
+        <v-dialog
+          v-model="dialog"
+          fullscreen
+          hide-overlay
+          transition="dialog-bottom-transition"
+        >
+          <v-card>
+            <v-toolbar dark color="#001">
+              <v-btn icon dark @click="dialog = false">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Diseño UI/UX</v-toolbar-title>
+              <v-spacer></v-spacer>
+              <v-toolbar-items>
+                <v-btn dark text @click="dialog = false"> Salir </v-btn>
+              </v-toolbar-items>
+            </v-toolbar>
+            <v-carousel v-model="model">
+              <v-carousel-item v-for="(color, i) in colors" :key="color">
+                <v-sheet :color="color" height="100%" tile>
+                  <v-row class="fill-height" align="center" justify="center">
+                    <div class="text-h2">Slide {{ i + 1 }}</div>
+                  </v-row>
+                </v-sheet>
+              </v-carousel-item>
+            </v-carousel>
+
+            <v-divider></v-divider>
+            <h1>holaa</h1>
+          </v-card>
+
+          <v-col>
+            <h1>holaa</h1>
+          </v-col>
+        </v-dialog>
       </v-row>
-    </v-col>
-  </v-parallax>
+    </template>
+
+    <!--///////////////////////-->
+    <template>
+      <v-row justify="center">
+        <v-dialog
+          v-model="dialog2"
+          fullscreen
+          hide-overlay
+          transition="dialog-bottom-transition"
+        >
+          <v-card>
+            <v-toolbar dark color="#001">
+              <v-btn icon dark @click="dialog2 = false">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Android</v-toolbar-title>
+              <v-spacer></v-spacer>
+              <v-toolbar-items>
+                <v-btn dark text @click="dialog2 = false"> Salir </v-btn>
+              </v-toolbar-items>
+            </v-toolbar>
+            <v-carousel v-model="model">
+              <v-carousel-item v-for="(color, i) in colors" :key="color">
+                <v-sheet :color="color" height="100%" tile>
+                  <v-row class="fill-height" align="center" justify="center">
+                    <div class="text-h2">Slide {{ i + 1 }}</div>
+                  </v-row>
+                </v-sheet>
+              </v-carousel-item>
+            </v-carousel>
+
+            <v-divider></v-divider>
+            <h1>holaa</h1>
+          </v-card>
+
+          <v-col>
+            <h1>holaa</h1>
+          </v-col>
+        </v-dialog>
+      </v-row>
+    </template>
+
+    <!--///////////////////////-->
+    <template>
+      <v-row justify="center">
+        <v-dialog
+          v-model="dialog3"
+          fullscreen
+          hide-overlay
+          transition="dialog-bottom-transition"
+        >
+          <v-card>
+            <v-toolbar dark color="#001">
+              <v-btn icon dark @click="dialog3 = false">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Vuejs</v-toolbar-title>
+              <v-spacer></v-spacer>
+              <v-toolbar-items>
+                <v-btn dark text @click="dialog3 = false"> Salir </v-btn>
+              </v-toolbar-items>
+            </v-toolbar>
+            <v-carousel v-model="model">
+              <v-carousel-item v-for="(color, i) in colors" :key="color">
+                <v-sheet :color="color" height="100%" tile>
+                  <v-row class="fill-height" align="center" justify="center">
+                    <div class="text-h2">Slide {{ i + 1 }}</div>
+                  </v-row>
+                </v-sheet>
+              </v-carousel-item>
+            </v-carousel>
+
+            <v-divider></v-divider>
+            <h1>holaa</h1>
+          </v-card>
+
+          <v-col>
+            <h1>holaa</h1>
+          </v-col>
+        </v-dialog>
+      </v-row>
+    </template>
+
+    <!--///////////////////////-->
+  </v-flex>
 </template>
 
 <script>
+//import { Carousel3d, Slide } from "vue-carousel-3d";
+
+//import Carrusel3D from "@/components/Carrusel3D.vue";
 //import { Bubble } from 'vue-burger-menu'
 //import Vue from "vue";
 import foto from "@/assets/foto.png";
@@ -115,6 +248,16 @@ export default {
   name: "App",
 
   data: () => ({
+    model: 0,
+    colors: ["primary", "secondary", "yellow darken-2", "red", "orange"],
+
+    dialog: false,
+    dialog2: false,
+    dialog3: false,
+    notifications: false,
+    sound: true,
+    widgets: false,
+
     java: java,
     vue: vue,
     android: android,
@@ -150,6 +293,11 @@ export default {
       //console.log("ACCESO A FOTO Y NOMBRE DEL USUARIO");
       console.log(this.$portafol);
     },
+  },
+
+  components: {
+    //Carousel3d,
+    //Slide,
   },
 };
 </script>

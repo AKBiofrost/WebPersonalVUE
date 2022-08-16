@@ -1,10 +1,10 @@
 <template>
   <v-row justify="space-around " class="card pa-2">
+    <!--///////////////////////-->
     <v-col Justify="center">
       <h1>Portafolio</h1>
-
       <div>
-        <v-card @click="Portafolio_fn" id="tarjeta-inactiva">
+        <v-card @click="$vuetify.goTo($refs.algo )" id="tarjeta-inactiva">
           <v-col Justify="center">
             <div class="padre">
               <div>
@@ -27,12 +27,12 @@
         </v-card>
       </div>
     </v-col>
-
+<!--///////////////////////-->
     <v-col>
       <h1>Perfíl</h1>
 
       <div>
-        <v-card id="tarjeta-inactiva">
+        <v-card  @click="$vuetify.goTo($refs.algo )" id="tarjeta-inactiva">
           <v-col Justify="center">
             <div class="padre">
               <div class="texto_boton">
@@ -53,12 +53,12 @@
         </v-card>
       </div>
     </v-col>
-
+<!--///////////////////////-->
     <v-col>
       <h1>Sobre Mí</h1>
 
       <div>
-        <v-card id="tarjeta-inactiva">
+        <v-card @click="$vuetify.goTo($refs.algo )"   id="tarjeta-inactiva">
           <v-col Justify="center">
             <div class="padre">
               <div class="texto_boton">
