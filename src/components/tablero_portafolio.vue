@@ -1,10 +1,12 @@
 <template>
   <v-flex fluid="true" width="100%">
-    <v-parallax
+    <v-img
       height="500"
-      dark
-      src="https://www.xtrafondos.com/wallpapers/estructura-abstracta-3d-gris-oscuro-3593.jpg"
+    
+      :src="tablero"
+      
     >
+ 
       <v-col>
         <h1 color="#fff">Portafolio</h1>
 
@@ -13,10 +15,10 @@
             <div>
               <v-card @click="dialog = true" id="tarjeta-inactiva">
                 <v-col>
-                  <h3 class="texto_boton">Diseño UI/UX</h3>
+                  <h3 > UI/UX</h3>
 
-                  <v-row>
-                    <img width="15%" :src="figma" class="ma-8" />
+                  <v-row align="center">
+                    <img id="figma" :src="figma" class="ma-8" />
 
                     <div class="padre-flex">
                       <div class="content">
@@ -32,12 +34,12 @@
               </v-card>
             </div>
           </v-col>
-<!--///////////////////////-->
+          <!--///////////////////////-->
           <v-col>
             <div>
               <v-card @click="dialog2 = true" id="tarjeta-inactiva">
                 <v-col>
-                  <h3 class="texto_boton">Android</h3>
+                  <h3 >Android</h3>
 
                   <v-row>
                     <img width="20%" :src="android" class="ma-8" />
@@ -56,12 +58,12 @@
               </v-card>
             </div>
           </v-col>
-<!--///////////////////////-->
+          <!--///////////////////////-->
           <v-col>
             <div>
               <v-card @click="dialog3 = true" id="tarjeta-inactiva">
                 <v-col>
-                  <h3 class="texto_boton">Frontend Vue</h3>
+                  <h3 > Vuejs</h3>
 
                   <v-row>
                     <img width="25%" :src="vue" class="ma-9" />
@@ -80,11 +82,11 @@
               </v-card>
             </div>
           </v-col>
-<!--///////////////////////-->
+          <!--///////////////////////-->
         </v-row>
       </v-col>
-    </v-parallax>
-    <!--///////////////////////-->
+    </v-img>
+    <!--////////Diseño UI/UX///////////////-->
 
     <template>
       <v-row justify="center">
@@ -107,26 +109,26 @@
             </v-toolbar>
             <v-carousel v-model="model">
               <v-carousel-item v-for="(color, i) in colors" :key="color">
-                <v-sheet :color="color" height="100%" tile>
+                <v-sheet height="100%" tile>
                   <v-row class="fill-height" align="center" justify="center">
-                    <div class="text-h2">Slide {{ i + 1 }}</div>
+                    <div class="text-h2">Proyecto {{ i + 1 }}</div>
                   </v-row>
                 </v-sheet>
               </v-carousel-item>
             </v-carousel>
 
             <v-divider></v-divider>
-            <h1>holaa</h1>
+            <v-card flat class="d-flex justify-center">
+              <v-btn>
+                <h3>Enlace</h3>
+              </v-btn>
+            </v-card>
           </v-card>
-
-          <v-col>
-            <h1>holaa</h1>
-          </v-col>
         </v-dialog>
       </v-row>
     </template>
 
-    <!--///////////////////////-->
+    <!--//////////Android/////////////-->
     <template>
       <v-row justify="center">
         <v-dialog
@@ -136,7 +138,7 @@
           transition="dialog-bottom-transition"
         >
           <v-card>
-            <v-toolbar dark color="#001">
+            <v-toolbar dark color="#a4c639">
               <v-btn icon dark @click="dialog2 = false">
                 <v-icon>mdi-close</v-icon>
               </v-btn>
@@ -148,26 +150,25 @@
             </v-toolbar>
             <v-carousel v-model="model">
               <v-carousel-item v-for="(color, i) in colors" :key="color">
-                <v-sheet :color="color" height="100%" tile>
+                <v-sheet height="100%" tile>
                   <v-row class="fill-height" align="center" justify="center">
-                    <div class="text-h2">Slide {{ i + 1 }}</div>
+                    <div class="text-h2">Proyecto {{ i + 1 }}</div>
                   </v-row>
                 </v-sheet>
               </v-carousel-item>
             </v-carousel>
-
             <v-divider></v-divider>
-            <h1>holaa</h1>
+            <v-card flat class="d-flex justify-center">
+              <v-btn color="#a4c639"   >
+                <h3>Enlace</h3>
+              </v-btn>
+            </v-card>
           </v-card>
-
-          <v-col>
-            <h1>holaa</h1>
-          </v-col>
         </v-dialog>
       </v-row>
     </template>
 
-    <!--///////////////////////-->
+    <!--///////// frontend//////////////-->
     <template>
       <v-row justify="center">
         <v-dialog
@@ -177,7 +178,7 @@
           transition="dialog-bottom-transition"
         >
           <v-card>
-            <v-toolbar dark color="#001">
+            <v-toolbar dark color="#4b5a">
               <v-btn icon dark @click="dialog3 = false">
                 <v-icon>mdi-close</v-icon>
               </v-btn>
@@ -189,7 +190,7 @@
             </v-toolbar>
             <v-carousel v-model="model">
               <v-carousel-item v-for="(color, i) in colors" :key="color">
-                <v-sheet :color="color" height="100%" tile>
+                <v-sheet  height="100%" tile>
                   <v-row class="fill-height" align="center" justify="center">
                     <div class="text-h2">Slide {{ i + 1 }}</div>
                   </v-row>
@@ -198,12 +199,14 @@
             </v-carousel>
 
             <v-divider></v-divider>
-            <h1>holaa</h1>
+           <v-card flat class="d-flex justify-center">
+              <v-btn color="#4b5a"   >
+                <h3>Enlace</h3>
+              </v-btn>
+            </v-card>
           </v-card>
 
-          <v-col>
-            <h1>holaa</h1>
-          </v-col>
+       
         </v-dialog>
       </v-row>
     </template>
@@ -241,6 +244,8 @@ import estrellas_movil from "@/assets/estrellometro-movil.svg";
 import carpeta from "@/assets/recursosVisuales/carpeta.png";
 import estrellas_ux from "@/assets/estrellometro-ux.svg";
 import java from "@/assets/java.svg";
+import tablero from "@/assets/fondo2.jpg";
+
 //import java1 from "@/assets/grupo14.svg";
 //import java2 from "@/assets/grupo15.svg";
 
@@ -250,7 +255,7 @@ export default {
   data: () => ({
     model: 0,
     colors: ["primary", "secondary", "yellow darken-2", "red", "orange"],
-
+    tablero:tablero, 
     dialog: false,
     dialog2: false,
     dialog3: false,
@@ -427,6 +432,10 @@ h2 {
   .texto_boton {
     color: #ffffff;
   }
+
+  h3{
+     color: #ffffff;
+  }
 }
 
 #tarjeta-inactiva {
@@ -443,4 +452,80 @@ h2 {
     color: #000;
   }
 }
+
+#figma{
+
+  width: 15%;
+}
+
+@media screen and (min-width: 199px) and (max-width: 320px) {
+
+#titulo{font-size: 1em; }
+
+  h1 {
+   font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 767px) {
+
+    h1 {
+   font-size: 1.6em;
+  }
+ 
+
+#figma{
+
+  width: 30%;
+}
+
+#tarjeta-inactiva {
+  position: absolute;
+  width: 30%;
+  height: 300px;
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 35px;
+
+  .texto_boton {
+    color: #000;
+    font-size: 0.9em;
+    text-align: center;
+  }
+}
+
+#tarjeta-inactiva:hover {
+  background: rgba(15, 18, 22, 0.8);
+  box-shadow: 0 8px 32px 0 rgba(193, 193, 196, 0.37);
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  border-radius: 35px;
+  color: #ffffff;
+  .texto_boton {
+    color: #ffffff;
+  }
+}
+
+}
+
+@media screen and (min-width: 640px) and (max-width: 760px) {
+  h1 {
+   font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  h1 {
+   font-size: 1em;
+  }
+}
+
+
+
+
+
+
+
 </style>

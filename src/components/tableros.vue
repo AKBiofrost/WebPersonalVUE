@@ -2,7 +2,7 @@
   <v-row justify="space-around " class="card pa-2">
     <!--///////////////////////-->
     <v-col Justify="center">
-      <h1>Portafolio</h1>
+      <h1>WUWUWUWUWWU</h1>
       <div>
         <v-card @click="$vuetify.goTo($refs.algo )" id="tarjeta-inactiva">
           <v-col Justify="center">
@@ -152,6 +152,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.2s;
@@ -193,7 +195,7 @@ export default {
 }
 
 .texto_boton {
-  font-size: 1.2em;
+  font-size: 5em;
 }
 .v-card.on-hover.theme--dark {
   background-color: rgba(#fff, 0.8);
@@ -253,7 +255,7 @@ h2 {
 
   background: rgba(15, 18, 22, 0.8);
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
-  border-radius: 60px;
+  border-radius: 10px;
 }
 
 #tarjeta-inactiva:hover {
@@ -276,10 +278,48 @@ h2 {
   -webkit-backdrop-filter: blur(5.5px);
   background: rgba(255, 255, 255, 0.3);
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
-  border-radius: 60px;
+  border-radius: 10px;
 
   .texto_boton {
     color: #000;
   }
 }
+
+@media screen and (min-width: 199px) and (max-width: 320px) {
+
+
+  font {
+   font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 767px) {
+ 
+
+ h1 {
+   font-size: 1em;
+  }
+
+
+img{
+width: 1em;
+height:2em; 
+}
+
+
+}
+
+@media screen and (min-width: 640px) and (max-width: 760px) {
+  h1 {
+   font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  h1 {
+   font-size: 1em;
+  }
+}
+
+
 </style>

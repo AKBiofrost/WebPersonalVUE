@@ -1,9 +1,10 @@
 <template>
   <v-col>
-  
+     <transition name="fade">
       <div id="rrss">
         <v-img class="logo" height="150" width="150" :src="Logo"> </v-img>
       </div>
+      </transition>
    
   </v-col>
 </template>
@@ -48,6 +49,15 @@ export default {
 <style lang="scss" scoped>
 .v-card.on-hover.theme--dark {
   background-color: rgba(#fff, 0.8);
+}
+
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 2s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 
 .padre {

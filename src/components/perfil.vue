@@ -1,117 +1,86 @@
 <template>
-  <v-card
-    height="500"
-   Justify="center"
-   flat
-   class="  pa-1 ma-2"
-  >
-   <h1>Perfíl</h1>
-  <v-row justify="space-around " class="card pa-2">
-    <v-col align="center">
-     
-
-      <div>
-        <v-card @click="Portafolio_fn" id="tarjeta-inactiva2">
-          <v-col align="center">
-            <div class="padre">
-              
-                <v-card   flat width="50%"   class="pa-1 rounded-xl">
-                <img width="90%" :src="fotos" />
+  <v-card height="500" Justify="center" flat class="pa-1">
+    <h1 class="clientes"   >Perfíl</h1>
+    <v-row justify="space-around " class="card pa-1">
+      <!-------------------------------------------------->
+      <v-col align="center">
+        <div>
+          <v-card @click="Portafolio_fn" id="tarjeta-inactiva2">
+            <v-col align="center">
+              <div class="padre">
+                <v-card flat class="foto rounded-xl">
+                  <img id="foto" :src="fotos" />
                 </v-card>
-              
-            </div>
+              </div>
 
-            <div class="padre-flex">
-              <div class="content">
-                <div class="padre">
-                  <font class="texto_boton"
-                    >Junior Developer
-                  </font>
+              <div class="padre-flex">
+                <div class="content">
+                  <div class="padre">
+                    <font class="texto_boton"> Developer mobile </font>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <!-------------------------------------------------->
-          </v-col>
-        </v-card>
-      </div>
-    </v-col>
+              <!-------------------------------------------------->
+            </v-col>
+          </v-card>
+        </div>
+      </v-col>
+      <!-------------------------------------------------->
 
-     <v-col align="center">
-      <h1>Desarrollador de productos</h1>
-        <h4>Desarrollo de productos digitales con las siguientes tecnologias</h4>
+      <v-col align="center">
+        <h3>Desarrollador de productos</h3>
+        <h4>
+          Desarrollo de productos digitales con las siguientes tecnologias
+        </h4>
 
-<div>
-      
+        <div>
           <v-col Justify="center">
             <v-row justify="space-around">
-           
-             
-                <v-card class="ma-3" flat width="10%">
-                <img width="60%" :src="android" />
-                </v-card>
-             
-            
+              <v-card class="ma-3" flat width="20%">
+                <img id="android" :src="android" />
+              </v-card>
 
-            <div class="padre-flex">
-              <div class="content">
-                <div class="padre">
-                  <font class="texto_boton" color="#000">
-                   Java / Kotlin </font
-                  >
+              <div class="padre-flex">
+                <div class="content">
+                  <div class="padre">
+                    <font class="texto_boton" color="#000"> Nativo </font>
+                  </div>
                 </div>
               </div>
-            </div>
-               </v-row>
+            </v-row>
 
-                 <v-row justify="space-around">
-           
-             
-                <v-card  class="ma-3" flat width="10%">
-                <img width="50%" :src="figma" />
-                </v-card>
-             
-            
+            <v-row justify="space-around">
+              <v-card class="ma-3" flat width="20%">
+                <img id="figma" :src="figma" />
+              </v-card>
 
-            <div class="padre-flex">
-              <div class="content">
-                <div class="padre">
-                  <font class="texto_boton" color="#000">
-                   Prototipo Figma</font
-                  >
+              <div class="padre-flex">
+                <div class="content">
+                  <div class="padre">
+                    <font class="texto_boton" color="#000"> Figma</font>
+                  </div>
                 </div>
               </div>
-            </div>
-               </v-row>
-                 <v-row justify="space-around">
-           
-             
-                <v-card class="ma-3"  flat width="10%">
-                <img width="60%" :src="vue" />
-                </v-card>
-             
-            
+            </v-row>
+            <v-row justify="space-around">
+              <v-card class="ma-3" flat width="20%">
+                <img id="vue" :src="vue" />
+              </v-card>
 
-            <div class="padre-flex">
-              <div class="content">
-                <div class="padre">
-                  <font class="texto_boton" color="#000">
-                   Vuejs + vuetify</font
-                  >
+              <div class="padre-flex">
+                <div class="content">
+                  <div class="padre">
+                    <font class="texto_boton" color="#000"> Vuejs </font>
+                  </div>
                 </div>
               </div>
-            </div>
-               </v-row>
+            </v-row>
           </v-col>
-       
-      </div>
-      
-    </v-col>
-
-
-    
-  </v-row>
- </v-card>
+        </div>
+      </v-col>
+    </v-row>
+  </v-card>
 </template>
 
 <script>
@@ -151,13 +120,13 @@ export default {
     vue: vue,
     android: android,
     figma: figma,
-   java: java,
+    java: java,
     estrellas_ux: estrellas_ux,
     carpeta: carpeta,
     tabla: tabla,
     show: true,
     Foto: foto,
-    fotos:fotos,
+    fotos: fotos,
     Logo: logo,
     Wallpaper: wallpaper,
     Behance: behance,
@@ -179,15 +148,12 @@ export default {
     //
   }),
   methods: {
-
     Portafolio_fn() {
-     this.Vue.prototype.$portafol = true;
-     //console.log("ACCESO A FOTO Y NOMBRE DEL USUARIO");
+      this.Vue.prototype.$portafol = true;
+      //console.log("ACCESO A FOTO Y NOMBRE DEL USUARIO");
       console.log(this.$portafol);
-    }
+    },
   },
-
-
 };
 </script>
 
@@ -286,6 +252,12 @@ h2 {
   text-align: center;
 }
 
+h3 {
+  font-family: "Roboto";
+  color: #000000;
+  font-size: 2.1em;
+}
+
 #tarjeta {
   position: absolute;
   width: 30%;
@@ -294,6 +266,24 @@ h2 {
   background: rgba(15, 18, 22, 0.8);
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
   border-radius: 60px;
+}
+
+#android {
+  width: 60%;
+}
+
+#figma {
+  width: 50%;
+}
+#vue {
+  width: 60%;
+}
+
+#foto {
+  width: 100%;
+}
+.foto {
+  width: 60%;
 }
 
 #tarjeta-inactiva:hover {
@@ -335,6 +325,94 @@ h2 {
 
   .texto_boton {
     color: #000;
+  }
+}
+
+@media screen and (min-width: 199px) and (max-width: 320px) {
+  #titulo {
+    font-size: 1em;
+  }
+
+  h1 {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 767px) {
+  h3 {
+    font-family: "Roboto";
+    color: #000000;
+    font-size: 1.3em;
+  }
+  .clientes {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+
+
+}
+
+  .texto_boton {
+    font-size: 1em;
+  }
+  h1 {
+    font-size: 1.3em;
+  }
+
+  h4 {
+    font-size: 0.8em;
+  }
+
+  #foto {
+    width: 100%;
+    height: 100px;
+  }
+  .foto {
+    width: 100%;
+  }
+
+  #android {
+    width: 100%;
+    height: 60px;
+  }
+
+  #figma {
+    width: 80%;
+    height: 60px;
+  }
+
+  #vue {
+    width: 100%;
+    height: 40px;
+  }
+
+  #tarjeta-inactiva2 {
+    position: absolute;
+    width: 40%;
+    height: 2.2hv;
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+
+    .texto_boton {
+      color: #000;
+    }
+  }
+  #foto {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 760px) {
+  h1 {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  h1 {
+    font-size: 1em;
   }
 }
 </style>

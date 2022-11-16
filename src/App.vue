@@ -1,175 +1,153 @@
 <template>
   <v-app>
-    <v-main color="#000">
-      <div class="fondo" v-if="BoolWelcome == false">
-        <v-img class="padre" height="100%" :src="Fondo">
-          <Particles />
-          <div class="hijo" aling="center">
-            <v-row justify="center">
-              <breeding-rhombus-spinner
-                :animation-duration="2000"
-                :size="120"
-                :color="'#fff'"
-              />
-            </v-row>
-            <h1>Bienvenido</h1>
-          </div>
-        </v-img>
-      </div>
-
-      <div v-if="BoolWelcome == true">
-        <div class="fondo">
-          <v-img class="padre" height="120%" :src="Fondo">
-            <body>
-              <div id="app">
-                <Particles />
-              </div>
-
-              <v-col align="center" v-if="!portafol && !perfil && !sobremi">
-                <cabecera class="d-flex justify-center"></cabecera>
-
-                <div class="titulo">
-                  <h1>Alexander K.Biofröst</h1>
-                </div>
-
-                <div class="Subtitulo">
-                  <h2>el valor es:{{ this.$portafol }}</h2>
-                </div>
-
-                <div class="Subtitulo">
-                  <h2>Diseñador de Productos</h2>
-                </div>
-                <v-col justify="center">
-                  <redes class="d-flex justify-center"></redes>
-                </v-col>
-
-               
-                <v-row justify="space-around " class="card pa-2">
-                  <!--///////////////////////-->
-                  <v-col Justify="center">
-                    <h1>Portafolio</h1>
-                    <div>
-                      <v-card
-                        @click="$vuetify.goTo($refs.algo2)"
-                        id="tarjeta-inactiva"
-                      >
-                        <v-col Justify="center">
-                          <div class="padre">
-                            <div>
-                              <img width="30%" :src="portafolio" />
-                            </div>
-                          </div>
-
-                          <div class="padre-flex">
-                            <div class="content">
-                              <div class="padre">
-                                <font class="texto_boton"
-                                  >Trabajos realizados en UI/UX y Android
-                                </font>
-                              </div>
-                            </div>
-                          </div>
-
-                          <!-------------------------------------------------->
-                        </v-col>
-                      </v-card>
-                    </div>
-                  </v-col>
-                  <!--///////////////////////-->
-                  <v-col>
-                    <h1>Perfíl</h1>
-
-                    <div>
-                      <v-card
-                        @click="$vuetify.goTo($refs.algo)"
-                        id="tarjeta-inactiva"
-                      >
-                        <v-col Justify="center">
-                          <div class="padre">
-                            <div class="texto_boton">
-                              <img width="30%" :src="Man" />
-                            </div>
-                          </div>
-
-                          <div class="padre-flex">
-                            <div class="content">
-                              <div class="padre">
-                                <font class="texto_boton" color="#fff"
-                                  >Metodologia por Design Thinking</font
-                                >
-                              </div>
-                            </div>
-                          </div>
-                        </v-col>
-                      </v-card>
-                    </div>
-                  </v-col>
-                  <!--///////////////////////-->
-                  <v-col>
-                    <h1>Sobre Mí</h1>
-
-                    <div>
-                      <v-card
-                        @click="$vuetify.goTo($refs.algo)"
-                        id="tarjeta-inactiva"
-                      >
-                        <v-col Justify="center">
-                          <div class="padre">
-                            <div class="texto_boton">
-                              <img width="30%" :src="CV" />
-                            </div>
-                          </div>
-
-                          <div class="padre-flex">
-                            <div class="content">
-                              <div class="padre">
-                                <font class="texto_boton" color="#fff">
-                                  Experiencia/Certificaciones</font
-                                >
-                              </div>
-                            </div>
-                          </div>
-                        </v-col>
-                      </v-card>
-                    </div>
-                  </v-col>
-                </v-row>
-              </v-col>
-            </body>
-          </v-img>
-
-          <div ref="algo"><perfil></perfil></div>
-
-          <div ref="algo2">
-            <tableroportafolio></tableroportafolio>
-          </div>
-
-          <v-card class="pa-2">
-            <Carrusel3D></Carrusel3D>
-          </v-card>
-
-          <!-- 
-          <v-card class="pa-2 ">
-            <Carrusel3D></Carrusel3D>
-          </v-card>
-
-
-           <v-card class="pa-2 ">
-            <animacion></animacion>
-          </v-card>
-          <v-card class="pa-2 ">
-            <hyper></hyper>
-          </v-card>
-   -->
+    <div class="fondo" v-if="BoolWelcome == false">
+      <v-img class="padre" height="100%" :src="Fondo">
+        <Particles />
+        <div class="hijo" aling="center">
+          <v-row justify="center">
+            <breeding-rhombus-spinner
+              :animation-duration="2000"
+              :size="120"
+              :color="'#fff'"
+            />
+          </v-row>
+          <h1>Bienvenido</h1>
         </div>
+      </v-img>
+    </div>
+
+    <div v-if="BoolWelcome == true">
+      <div class="fondo">
+        <v-img class="padre" height="120%" :src="Fondo">
+          <div>
+            <Particles />
+          </div>
+
+          <v-col align="center" >
+            
+              <cabecera class="d-flex justify-center"></cabecera>
+          
+            <div class="titulo">
+              <h1 class="titulo" v-if="BoolWelcome">Alexander K.Biofröst</h1>
+            </div>
+
+            <div class="Subtitulo">
+              <h2>Desarrollador de Productos</h2>
+            </div>
+            <v-col justify="center">
+              <redes class="d-flex justify-center"></redes>
+            </v-col>
+
+            <v-row justify="space-around " class="card pa-2">
+              <!--///////////////////////-->
+              <v-col Justify="center">
+                <h1>Portafolio</h1>
+                <div>
+                  <v-card
+                    @click="$vuetify.goTo($refs.algo2)"
+                    id="tarjeta-inactiva"
+                  >
+                    <v-col Justify="center">
+                      <div class="padre">
+                        <div>
+                          <img width="30%" :src="portafolio" />
+                        </div>
+                      </div>
+
+                      <div class="padre-flex">
+                        <div class="content">
+                          <div class="padre">
+                            <font class="texto_boton"> Figma/ Android </font>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-------------------------------------------------->
+                    </v-col>
+                  </v-card>
+                </div>
+              </v-col>
+              <!--///////////////////////-->
+              <v-col>
+                
+                <h1  >Perfíl</h1>
+
+                <div>
+                  <v-card
+                    @click="$vuetify.goTo($refs.algo)"
+                    id="tarjeta-inactiva"
+                  >
+                    <v-col Justify="center">
+                      <div class="padre">
+                        <div class="texto_boton">
+                          <img width="30%" :src="Man" />
+                        </div>
+                      </div>
+
+                      <div class="padre-flex">
+                        <div class="content">
+                          <div class="padre">
+                            <font class="texto_boton" color="#fff"
+                              >Design Thinking</font
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </v-col>
+                  </v-card>
+                </div>
+              </v-col>
+              <!--///////////////////////-->
+              <v-col>
+                <h1>Sobre Mí</h1>
+
+                <div>
+                  <v-card
+                    @click="$vuetify.goTo($refs.algo)"
+                    id="tarjeta-inactiva"
+                  >
+                    <v-col Justify="center">
+                      <div class="padre">
+                        <div class="texto_boton">
+                          <img width="30%" :src="CV" />
+                        </div>
+                      </div>
+
+                      <div class="padre-flex">
+                        <div class="content">
+                          <div class="padre">
+                            <font class="texto_boton" color="#fff">
+                              Experiencia</font
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </v-col>
+                  </v-card>
+                </div>
+              </v-col>
+            </v-row>
+          </v-col>
+        </v-img>
+
+        <div ref="algo"><perfil></perfil></div>
+
+        <div ref="algo2">
+          <tableroportafolio></tableroportafolio>
+        </div>
+
+        <v-card class="pa-2">
+          <h1  class="clientes">Empresas atendidas</h1>
+          <Carrusel3D></Carrusel3D>
+        </v-card>
       </div>
-    </v-main>
+    </div>
   </v-app>
 </template>
 
 <script>
 //import { Bubble } from 'vue-burger-menu'
-//import Vue from "vue";
+import Vue from "vue";
 import foto from "@/assets/foto.png";
 import tabla from "@/assets/recursosVisuales/tabla.png";
 //import skill from '@/components/skill.vue'
@@ -194,14 +172,14 @@ import java from "@/assets/java.svg";
 //import java2 from "@/assets/grupo15.svg";
 
 //import { Bubble } from "vue-burger-menu";
-import Vue from "vue";
+
 import cabecera from "@/components/cabecera.vue";
 import tableros from "@/components/tableros.vue";
 import tableroportafolio from "@/components/tablero_portafolio.vue";
 import perfil from "@/components/perfil.vue";
 import redes from "@/components/redesSociales.vue";
 //import portafolio from "@/components/tableros.vue";
-import fondo from "@/assets/fondo.webp";
+import fondo from "@/assets/fondo.jpg";
 import Particles from "@/components/particles.vue";
 import vue from "@/assets/vue.webp";
 import android from "@/assets/android.webp";
@@ -348,27 +326,9 @@ h1 {
   width: 100%;
   height: 100vh;
 }
-#body {
-  height: 120%;
-  background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhOq_1DpXtFtAHmob25t1TMdqJazWOBRt7ysq8uaeUrW3L5u6Vp55vfNq0AuG88tG7ZJdq1RjMO_8by8qx2ubtJGEpD4HSFbTrAy4WDttYs5JxL3lfYKq1XiyM-NdnuuWVg8FUNuJw3Koi67huWhRAoHBQi2n2NghAbxNwidMtqiijjspmxwpy0GZrV/s1440/Component%201.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-blend-mode: darken;
-  position: absolute;
-  filter: opacity(0.5);
-}
 
-#fondo {
-  height: 120%;
-  background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhOq_1DpXtFtAHmob25t1TMdqJazWOBRt7ysq8uaeUrW3L5u6Vp55vfNq0AuG88tG7ZJdq1RjMO_8by8qx2ubtJGEpD4HSFbTrAy4WDttYs5JxL3lfYKq1XiyM-NdnuuWVg8FUNuJw3Koi67huWhRAoHBQi2n2NghAbxNwidMtqiijjspmxwpy0GZrV/s1440/Component%201.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-blend-mode: darken;
-  position: absolute;
-  filter: opacity(0.5);
-}
+
+
 
 h2 {
   font-family: "Roboto";
@@ -389,9 +349,6 @@ h2 {
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
   border-radius: 60px;
 }
-
-
-
 
 #tarjeta-inactiva:hover {
   background: rgba(15, 18, 22, 0.8);
@@ -419,9 +376,6 @@ h2 {
     color: #000;
   }
 }
-
-
-
 
 .fade-enter-active,
 .fade-leave-active {
@@ -553,6 +507,66 @@ h2 {
     color: #000;
   }
 }
+.clientes {
+  color: rgb(0, 0, 0);
+
+}
+
+@media screen and (min-width: 199px) and (max-width: 320px) {
+  #titulo {
+    font-size: 1em;
+  }
+
+  h1 {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 767px) {
+  .titulo {
+    font-size: 1.5em;
+  }
+  .fondo {
+  width: 98%;
+  height: 100vh;
+}
+.clientes {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
 
 
+}
+
+  .texto_boton {
+    font-size: 1em;
+  }
+  h1 {
+    font-size: 1.3em;
+  }
+  img {
+    width: 70px;
+    height: 70px;
+  }
+
+  #tarjeta-inactiva {
+    position: absolute;
+    width: 30%;
+    height: 160px;
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 40px;
+
+    .texto_boton {
+      color: #000;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  h1 {
+    font-size: 1em;
+  }
+}
 </style>

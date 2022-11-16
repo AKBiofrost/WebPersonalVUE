@@ -2,16 +2,24 @@
   <div id="rrss">
     <ul>
       <li>
-        <a class="fondo"> <img height="65" width="74" :src="Gmail" /> </a>
+        <a class="Linkedin" @click="visitarLinkedin">
+          <img height="65" width="74" :src="Linkedin" />
+        </a>
       </li>
       <li>
-        <a href="#news"> <img height="65" width="74" :src="Behance" /></a>
+        <a class="Behance" @click="visitarbehance">
+          <img height="65" width="74" :src="Behance"
+        /></a>
       </li>
       <li>
-        <a href="#contact"> <img height="65" width="74" :src="Linkedin" /> </a>
+        <a class="Instagram" @click="visitarInstagram">
+          <img height="65" width="74" :src="Instagram" />
+        </a>
       </li>
       <li>
-        <a href="#about"> <img height="65" width="74" :src="Instagram" /> </a>
+        <a class="Gmail" @click="visitarGithub">
+          <img height="65" width="74" :src="Gmail" />
+        </a>
       </li>
     </ul>
   </div>
@@ -24,7 +32,8 @@ import foto from "@/assets/foto.png";
 import logo from "@/assets/branding/logo.svg";
 import wallpaper from "@/assets/branding/App-3.svg";
 import behance from "@/assets/rrss/behance-perspective.png";
-import gmail from "@/assets/rrss/gmail-google-perspective.png";
+//import gmail from "@/assets/rrss/gmail-google-perspective.png";
+import gmail from "@/assets/rrss/github-logo.png";
 import linkedin from "@/assets/rrss/linkedin-perspective.png";
 import instagram from "@/assets/rrss/instagram-insta-perspective.png";
 import man from "@/assets/recursosVisuales/man.png";
@@ -50,6 +59,32 @@ export default {
   }),
   components: {
     // Bubble // Register your component
+  },
+
+  methods: {
+    visitarInstagram() {
+      var win = window.open("https://www.instagram.com/abiofrost/", "_blank");
+      // Cambiar el foco al nuevo tab (punto opcional)
+      win.focus();
+    },
+    visitarLinkedin() {
+      var win = window.open(
+        "https://www.linkedin.com/in/alexanderkbiofrost/",
+        "_blank"
+      );
+      // Cambiar el foco al nuevo tab (punto opcional)
+      win.focus();
+    },
+    visitarbehance() {
+      var win = window.open("https://www.behance.net/Abiofrost", "_blank");
+      // Cambiar el foco al nuevo tab (punto opcional)
+      win.focus();
+    },
+    visitarGithub() {
+      var win = window.open("https://github.com/AKBiofrost", "_blank");
+      // Cambiar el foco al nuevo tab (punto opcional)
+      win.focus();
+    },
   },
 };
 </script>
@@ -130,7 +165,44 @@ li a:hover {
   box-shadow: 0 8px 32px 0 rgba(193, 193, 196, 0.37);
   backdrop-filter: blur(5.5px);
   -webkit-backdrop-filter: blur(5.5px);
-  border-radius: 50px;
-  
+  border-radius: 25px;
+}
+
+@media screen and (min-width: 199px) and (max-width: 320px) {
+  #titulo {
+    font-size: 1em;
+  }
+
+  h1 {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 767px) {
+  img {
+    height: 45px;
+    width: 54px;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 7px;
+    text-decoration: none;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 760px) {
+  h1 {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  h1 {
+    font-size: 1em;
+  }
 }
 </style>
