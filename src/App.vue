@@ -18,15 +18,14 @@
 
     <div v-if="BoolWelcome == true">
       <div class="fondo">
-        <v-img class="padre" height="120%" :src="Fondo">
+        <v-img  id="wallpaper" class="padre" height="120%" :src="Fondo">
           <div>
             <Particles />
           </div>
 
-          <v-col align="center" >
-            
-              <cabecera class="d-flex justify-center"></cabecera>
-          
+          <v-col align="center">
+            <cabecera class="d-flex justify-center"></cabecera>
+
             <div class="titulo">
               <h1 class="titulo" v-if="BoolWelcome">Alexander K.Biofröst</h1>
             </div>
@@ -44,7 +43,7 @@
                 <h1>Portafolio</h1>
                 <div>
                   <v-card
-                    @click="$vuetify.goTo($refs.algo2)"
+                    @click="$vuetify.goTo($refs.portafolio)"
                     id="tarjeta-inactiva"
                   >
                     <v-col Justify="center">
@@ -69,12 +68,11 @@
               </v-col>
               <!--///////////////////////-->
               <v-col>
-                
-                <h1  >Perfíl</h1>
+                <h1>Perfíl</h1>
 
                 <div>
                   <v-card
-                    @click="$vuetify.goTo($refs.algo)"
+                    @click="$vuetify.goTo($refs.perfil)"
                     id="tarjeta-inactiva"
                   >
                     <v-col Justify="center">
@@ -103,7 +101,7 @@
 
                 <div>
                   <v-card
-                    @click="$vuetify.goTo($refs.algo)"
+                    @click="$vuetify.goTo($refs.experiencia)"
                     id="tarjeta-inactiva"
                   >
                     <v-col Justify="center">
@@ -130,28 +128,30 @@
           </v-col>
         </v-img>
 
-        <div ref="algo"><perfil></perfil></div>
+        <div ref="perfil"><perfil></perfil></div>
 
-        <div ref="algo2">
+        <div ref="portafolio" >
           <tableroportafolio></tableroportafolio>
         </div>
 
-        <v-card class="pa-2">
-          <h1  class="clientes">Empresas atendidas</h1>
+        <v-card  ref="experiencia"   class="pa-2">
+          <h1 class="clientes">Empresas Atendidas</h1>
           <Carrusel3D></Carrusel3D>
         </v-card>
+
+<v-fab-transition>
+<a href="#" class="fab"> <v-icon>mdi-chevron-up</v-icon>   </a>
+</v-fab-transition>
+         
       </div>
     </div>
   </v-app>
 </template>
 
 <script>
-//import { Bubble } from 'vue-burger-menu'
 import Vue from "vue";
 import foto from "@/assets/foto.png";
 import tabla from "@/assets/recursosVisuales/tabla.png";
-//import skill from '@/components/skill.vue'
-//import logo from '@/assets/logoAKB.png'
 import logo from "@/assets/branding/logo.svg";
 import wallpaper from "@/assets/branding/App-3.svg";
 import behance from "@/assets/rrss/behance-perspective.png";
@@ -168,37 +168,17 @@ import estrellas_movil from "@/assets/estrellometro-movil.svg";
 import carpeta from "@/assets/recursosVisuales/carpeta.png";
 import estrellas_ux from "@/assets/estrellometro-ux.svg";
 import java from "@/assets/java.svg";
-//import java1 from "@/assets/grupo14.svg";
-//import java2 from "@/assets/grupo15.svg";
-
-//import { Bubble } from "vue-burger-menu";
-
 import cabecera from "@/components/cabecera.vue";
 import tableros from "@/components/tableros.vue";
 import tableroportafolio from "@/components/tablero_portafolio.vue";
 import perfil from "@/components/perfil.vue";
 import redes from "@/components/redesSociales.vue";
-//import portafolio from "@/components/tableros.vue";
-import fondo from "@/assets/fondo.jpg";
+import fondo from "@/assets/fondo.webp";
 import Particles from "@/components/particles.vue";
 import vue from "@/assets/vue.webp";
 import android from "@/assets/android.webp";
 import figma from "@/assets/figma.webp";
 import Carrusel3D from "@/components/Carrusel3D.vue";
-//import animacion from "@/components/animacion.vue";
-//import hyper from "@/components/hyper.vue";
-//import { Carousel3d, Slide } from 'vue-carousel-3d';
-//import { AtomSpinner } from "epic-spinners";
-//import { HollowDotsSpinner } from "epic-spinners";
-//import { PixelSpinner } from "epic-spinners";
-//import { IntersectingCirclesSpinner } from "epic-spinners";
-//import { ScalingSquaresSpinner } from "epic-spinners";
-//import { HalfCircleSpinner } from "epic-spinners";
-//import { TrinityRingsSpinner } from "epic-spinners";
-//import { FulfillingSquareSpinner } from "epic-spinners";
-//import { CirclesToRhombusesSpinner } from "epic-spinners";
-//import { SemipolarSpinner } from "epic-spinners";
-//import { FulfillingBouncingCircleSpinner } from "epic-spinners";
 import { BreedingRhombusSpinner } from "epic-spinners";
 Vue.prototype.$portafol = false;
 export default {
@@ -327,9 +307,6 @@ h1 {
   height: 100vh;
 }
 
-
-
-
 h2 {
   font-family: "Roboto";
   color: #ffffff;
@@ -360,6 +337,29 @@ h2 {
   .texto_boton {
     color: #ffffff;
   }
+}
+.fab{
+  font-size: 16px; /* Cambiar el tamaño de la tipografia */
+	text-transform: uppercase; /* Texto en mayusculas */
+	font-weight: bold; /* Fuente en negrita o bold */
+	color: #ffffff; /* Color del texto */
+	border-radius: 100px; /* Borde del boton */
+	letter-spacing: 2px; /* Espacio entre letras */
+	background-color: #4686e5; /* Color de fondo */
+	padding: 30px 30px; /* Relleno del boton */
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	transition: all 100ms ease 50ms;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	z-index: 99;
+
+}
+
+.fab:hover {
+	background-color: #a5502c; /* Color de fondo al pasar el cursor */
+	box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+	transform: translateY(-9px);
 }
 
 #tarjeta-inactiva {
@@ -509,33 +509,109 @@ h2 {
 }
 .clientes {
   color: rgb(0, 0, 0);
-
 }
 
 @media screen and (min-width: 199px) and (max-width: 320px) {
-  #titulo {
-    font-size: 1em;
+  
+    .fab{
+
+		bottom: 20px;
+		right: 20px;
+    padding: 20px 20px; /* Relleno del boton */
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+   backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+
+
+  }
+  
+  
+  .titulo {
+    font-size: 1.2em;
+  }
+  .wallpaper{
+height: 250%;
+
+  }
+  .fondo {
+    width: 100%;
+    height: 100vh;
+  }
+  .clientes {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 1.4em;
+    text-align: center;
+
+    font-family: "Roboto";
+
+    line-height: 59px;
   }
 
+  .texto_boton {
+    font-size: 0.8em;
+  }
   h1 {
-    font-size: 1em;
+    font-size: 0.8em;
+  }
+  img {
+    width: 70px;
+    height: 70px;
+  }
+
+  #tarjeta-inactiva {
+    position: absolute;
+    width: 30%;
+    height: 160px;
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 40px;
+
+    .texto_boton {
+      color: #000;
+    }
   }
 }
 
 @media screen and (min-width: 321px) and (max-width: 767px) {
+  
+  .fab{
+
+bottom: 20px;
+		right: 20px;
+    padding: 20px 20px; /* Relleno del boton */
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+ backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+
+  }
+  
+  
+  
   .titulo {
     font-size: 1.5em;
   }
+ 
   .fondo {
-  width: 98%;
-  height: 100vh;
-}
-.clientes {
+    width: 98%;
+    height: 100vh;
+  }
+  .clientes {
   color: rgb(0, 0, 0);
-  font-weight: bold;
+    font-weight: bold;
+    font-size: 1.4em;
+    text-align: center;
 
+    font-family: "Roboto";
 
-}
+    line-height: 59px;
+  }
 
   .texto_boton {
     font-size: 1em;

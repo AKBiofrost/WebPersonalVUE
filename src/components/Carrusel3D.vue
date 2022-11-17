@@ -1,32 +1,26 @@
 <template>
+
+
   <carousel-3d>
     <slide v-for="(slide, i) in slides" :index="i" :key="i">
-      <template slot-scope="{ index, isCurrent, leftIndex, rightIndex }">
-        <img
-          :data-index="index"
-          :class="{
-            current: isCurrent,
-            onLeft: leftIndex >= 0,
-            onRight: rightIndex >= 0,
-          }"
-          
-          :src="slide.src"
-        />
+      <img
+        :data-index="index"
+        :class="{
+          current: isCurrent,
+          onLeft: leftIndex >= 0,
+          onRight: rightIndex >= 0,
+        }"
+        :src="AJA[i]"
+      />
 
-        <h1 color="#552">{{ index }}</h1>
-        <img />
-      </template>
+      <img />
     </slide>
   </carousel-3d>
 </template>
 
 <script>
-//import { Bubble } from 'vue-burger-menu'
-//import Vue from "vue";
 import foto from "@/assets/foto.png";
 import tabla from "@/assets/recursosVisuales/tabla.png";
-//import skill from '@/components/skill.vue'
-//import logo from '@/assets/logoAKB.png'
 import logo from "@/assets/branding/logo.svg";
 import wallpaper from "@/assets/branding/App-3.svg";
 import behance from "@/assets/rrss/behance-perspective.png";
@@ -43,14 +37,20 @@ import estrellas_movil from "@/assets/estrellometro-movil.svg";
 import carpeta from "@/assets/recursosVisuales/carpeta.png";
 import estrellas_ux from "@/assets/estrellometro-ux.svg";
 import java from "@/assets/java.svg";
-//import java1 from "@/assets/grupo14.svg";
-//import java2 from "@/assets/grupo15.svg";
+import test from "@/assets/test.svg";
+import test2 from "@/assets/test2.svg";
+import test3 from "@/assets/test3.svg";
+import test4 from "@/assets/test4.svg";
 import { Carousel3d, Slide } from "vue-carousel-3d";
 
 export default {
   name: "App",
 
   data: () => ({
+    test: test,
+    test2: test2,
+    test3: test3,
+    test4: test4,
     java: java,
     estrellas_ux: estrellas_ux,
     carpeta: carpeta,
@@ -72,12 +72,14 @@ export default {
     portafol: false,
     estrellas_movil: estrellas_movil,
     slides: 7,
+    AJA: [test, test2, test3, test4, test, test3, test2],
+    colors: ["primary", "secondary", "yellow darken-2", "red", "orange"],
     //
   }),
   methods: {
     Portafolio_fn() {
       this.Vue.prototype.$portafol = true;
-      //console.log("ACCESO A FOTO Y NOMBRE DEL USUARIO");
+     
       console.log(this.$portafol);
     },
   },
@@ -89,6 +91,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.2s;
@@ -219,4 +223,107 @@ h2 {
     color: #000;
   }
 }
+
+@media screen and (min-width: 199px) and (max-width: 320px) {
+.titulo {
+    font-size: 1.5em;
+  }
+  .fondo {
+  width: 98%;
+  height: 100vh;
+}
+.clientes {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+
+
+}
+
+  .texto_boton {
+    font-size: 1em;
+  }
+  h1 {
+    font-size: 1.3em;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    align-content: center;
+  }
+
+  #tarjeta-inactiva {
+    position: absolute;
+    width: 30%;
+    height: 160px;
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 40px;
+
+    .texto_boton {
+      color: #000;
+    }
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 767px) {
+  .titulo {
+    font-size: 1.5em;
+  }
+  .fondo {
+  width: 98%;
+  height: 100vh;
+}
+.clientes {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+
+
+}
+
+  .texto_boton {
+    font-size: 1em;
+  }
+  h1 {
+    font-size: 1.3em;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    align-content: center;
+  }
+
+  #tarjeta-inactiva {
+    position: absolute;
+    width: 30%;
+    height: 160px;
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 40px;
+
+    .texto_boton {
+      color: #000;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  h1 {
+    font-size: 1em;
+  }
+
+    img {
+    width: 100%;
+    height: 100%;
+    align-content: center;
+  }
+}
+
+
+
+
+
 </style>

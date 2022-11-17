@@ -31,11 +31,11 @@ import foto from "@/assets/foto.png";
 //import logo from '@/assets/logoAKB.png'
 import logo from "@/assets/branding/logo.svg";
 import wallpaper from "@/assets/branding/App-3.svg";
-import behance from "@/assets/rrss/behance-perspective.png";
+import behance from "@/assets/rrss/behance-perspective.webp";
 //import gmail from "@/assets/rrss/gmail-google-perspective.png";
-import gmail from "@/assets/rrss/github-logo.png";
-import linkedin from "@/assets/rrss/linkedin-perspective.png";
-import instagram from "@/assets/rrss/instagram-insta-perspective.png";
+import gmail from "@/assets/rrss/github-logo.webp";
+import linkedin from "@/assets/rrss/linkedin-perspective.webp";
+import instagram from "@/assets/rrss/instagram-insta-perspective.webp";
 import man from "@/assets/recursosVisuales/man.png";
 import cv from "@/assets/recursosVisuales/CV.png";
 import logo3D from "@/assets/3dlogo.png";

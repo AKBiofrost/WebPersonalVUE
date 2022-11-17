@@ -31,7 +31,7 @@
       <v-col align="center">
         <h3>Desarrollador de productos</h3>
         <h4>
-          Desarrollo de productos digitales con las siguientes tecnologias
+          Trabajo con las siguientes tecnologias a nivel medio-alto por SCRUM y Design thinking
         </h4>
 
         <div>
@@ -329,24 +329,20 @@ h3 {
 }
 
 @media screen and (min-width: 199px) and (max-width: 320px) {
-  #titulo {
-    font-size: 1em;
-  }
-
-  h1 {
-    font-size: 1em;
-  }
-}
-
-@media screen and (min-width: 321px) and (max-width: 767px) {
-  h3 {
+h3 {
     font-family: "Roboto";
     color: #000000;
     font-size: 1.3em;
   }
   .clientes {
   color: rgb(0, 0, 0);
-  font-weight: bold;
+    font-weight: bold;
+    font-size: 1.4em;
+    text-align: center;
+
+    font-family: "Roboto";
+
+    line-height: 59px;
 
 
 }
@@ -356,6 +352,10 @@ h3 {
   }
   h1 {
     font-size: 1.3em;
+       font-weight: bold;
+        text-align: center;
+
+    font-family: "Roboto";
   }
 
   h4 {
@@ -372,17 +372,93 @@ h3 {
 
   #android {
     width: 100%;
-    height: 60px;
+    height: 40px;
   }
 
   #figma {
     width: 80%;
-    height: 60px;
+    height: 40px;
   }
 
   #vue {
     width: 100%;
-    height: 40px;
+    height: 30px;
+  }
+
+  #tarjeta-inactiva2 {
+    position: absolute;
+    width: 40%;
+    height: 2.2hv;
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+
+    .texto_boton {
+      color: #000;
+    }
+  }
+  #foto {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 767px) {
+  h3 {
+    font-family: "Roboto";
+    color: #000000;
+    font-size: 1.3em;
+  }
+  .clientes {
+   color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: center;
+
+    font-family: "Roboto";
+
+    line-height: 59px;
+
+
+}
+
+  .texto_boton {
+    font-size: 1em;
+  }
+  h1 {
+    font-size: 1.3em;
+       font-weight: bold;
+        text-align: center;
+
+    font-family: "Roboto";
+  }
+
+  h4 {
+    font-size: 0.8em;
+  }
+
+  #foto {
+    width: 100%;
+    height: 100px;
+  }
+  .foto {
+    width: 100%;
+  }
+
+  #android {
+    width: 100%;
+    height: 50px;
+  }
+
+  #figma {
+    width: 80%;
+    height: 50px;
+  }
+
+  #vue {
+    width: 100%;
+    height: 35px;
   }
 
   #tarjeta-inactiva2 {
