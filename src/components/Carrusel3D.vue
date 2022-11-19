@@ -41,6 +41,10 @@ import test from "@/assets/test.svg";
 import test2 from "@/assets/test2.svg";
 import test3 from "@/assets/test3.svg";
 import test4 from "@/assets/test4.svg";
+import test5 from "@/assets/test5.svg";
+import test6 from "@/assets/test6.svg";
+import test7 from "@/assets/test7.svg";
+import test8 from "@/assets/test8.svg";
 import { Carousel3d, Slide } from "vue-carousel-3d";
 
 export default {
@@ -51,6 +55,10 @@ export default {
     test2: test2,
     test3: test3,
     test4: test4,
+    test5: test5,
+    test6: test6,
+    test7: test7,
+    test8: test8,
     java: java,
     estrellas_ux: estrellas_ux,
     carpeta: carpeta,
@@ -72,7 +80,7 @@ export default {
     portafol: false,
     estrellas_movil: estrellas_movil,
     slides: 7,
-    AJA: [test, test2, test3, test4, test, test3, test2],
+    AJA: [test, test2, test3, test4, test5, test6, test7, test8],
     colors: ["primary", "secondary", "yellow darken-2", "red", "orange"],
     //
   }),
